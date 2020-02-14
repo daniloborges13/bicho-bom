@@ -1,0 +1,82 @@
+page-cadastro {
+    ion-content{
+        background: url('./../../../assets/imgs/fundoLogin.jpg') !important;
+        background-position: center !important;
+        background-size: cover !important;
+        
+    }
+    .filter{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6) !important; 
+    }
+    ion-card{
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+    ion-card-content img{
+        width: 130px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .title{
+        text-align: center;
+        margin-top: -15px;
+        margin-bottom: 20px;
+        color: #FFFFFF !important;
+    }
+    ion-item{
+        margin-bottom: 5px !important;
+        border: none !important;
+    }
+
+    p{
+        padding: 15px;
+    }
+
+    .item-inner, ion-item {
+        box-shadow: none !important;
+        border-bottom: 1px #ccc solid !important; 
+    }
+    
+
+    .logo{
+        padding: 30px 0;
+    }
+    .list-md .item-block .item-inner{
+        border: none !important;
+    }
+    .list-ios .item-block .item-inner{
+        border: none !important;
+    }
+    .btn-clear{
+        font-size: small !important;
+        color: #FFFFFF;
+    }
+    .txt-login{
+        text-align: center;
+        font-size: smaller;
+    }
+    .text-danger{
+        color: #FFBA08;
+        font-size: small;
+        background: transparent;
+        margin-top: -10px ;
+    }
+    .text-input-md{
+        margin: 0 !important;
+    }
+
+    .txtTransparent{
+        background-color: transparent;
+    }
+
+    .corIcone{
+        color: #ffffff;
+    }
+
+    .placeholderEmail{
+        color: #FFFFFF;
+    }
+
+}

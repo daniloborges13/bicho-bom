@@ -91,7 +91,7 @@ export class LoginPage {
  
 
   cadastro() {
-    this.router.navigate['/cadastro'];
+    this.router.navigate['cadastro'];
   }
 
 
