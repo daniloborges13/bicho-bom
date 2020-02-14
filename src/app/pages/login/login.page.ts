@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { User } from 'src/app/components/models/model';
 import { NgForm } from '@angular/forms';
-import { NavController, NavParams, LoadingController, ToastController } from '@ionic/angular';
+import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import { LoginService } from 'src/app/services/login/loginService';
 import { HomePage } from 'src/app/home/home.page';
 import { CadastroPage } from '../cadastro/cadastro.page';
@@ -21,7 +21,6 @@ export class LoginPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
     public loadCtrl: LoadingController,
     public toastCtrl: ToastController,
     private loginService: LoginService,
