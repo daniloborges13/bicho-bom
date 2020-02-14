@@ -1,122 +1,113 @@
-   
-    .separator {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 5px;
-      }
-      .separator::before,
-      .separator::after {
-        content: '';
-        flex: 1;
-        border-bottom: 1px solid #FFFFFF;
-      }
-      .separator::before {
-        margin-right: .25em;
-      }
-      .separator::after {
-        margin-left: .25em;
-      }
-     
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ffffff;
+}
+.separator::before {
+  margin-right: 0.25em;
+}
+.separator::after {
+  margin-left: 0.25em;
+}
 
+ion-content {
+  width: 100% !important;
+  height: 100% !important;
+  --background: url("/assets/imgs/fundoLogin.jpg") 0 0/100% 100% no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
 
+ion-card {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+ion-card-content img {
+  width: 130px;
+  height: auto;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+}
 
-    ion-content{
-        width: 100% !important;
-        height: 100% !important;
-        background: url('./../../../assets/imgs/fundoLogin.jpg') !important;
-        background-size: cover !important;
-        background-position: center !important;
-     }
-  
-    ion-card{
-        box-shadow: none !important;
-        background: transparent !important;
-    }
-    ion-card-content img{
-        width: 130px;
-        height: auto;
-        margin: 0 auto;
-    }
-    .title{
-        text-align: center;
-        margin-top: -15px;
-        margin-bottom: 20px;
-        color: #FFFFFF !important;
-    }
+p {
+  padding: 15px;
+}
 
-    p{
-        padding: 15px;
-    }
+ion-row {
+  text-align: center;
+}
 
-    ion-row{
-        text-align: center;
-    }
+ion-item {
+  margin-bottom: 5px !important;
+  border: none !important;
+}
 
-    ion-item{
-        margin-bottom: 5px !important;
-        border: none !important;
-    }
+.item-inner,
+ion-item {
+  box-shadow: none !important;
+  border-bottom: 1px #ccc solid !important;
+}
+.logo {
+  padding: 10px 0;
+}
+.list-md .item-block .item-inner {
+  border: none !important;
+}
+.list-ios .item-block .item-inner {
+  border: none !important;
+}
+.btn-clear {
+  font-size: small !important;
+  color: #ffffff;
+}
+.txt-login {
+  text-align: center;
+  font-size: smaller;
+}
+.text-danger {
+  color: #ffba08;
+  font-size: small;
+  background: transparent;
+  margin-top: -10px;
+}
+.text-input-md {
+  margin: 0 !important;
+}
 
-    .item-inner, ion-item {      
-        box-shadow: none !important;
-        border-bottom: 1px #ccc solid !important; 
-    }
-    .logo{
-        padding: 10px 0;
-    }
-    .list-md .item-block .item-inner{
-        border: none !important;
-    }
-    .list-ios .item-block .item-inner{
-        border: none !important;
-    }
-    .btn-clear{
-        font-size: small !important;
-        color: #FFFFFF;
-        
-    }
-    .txt-login{
-        text-align: center;
-        font-size: smaller;
-    }
-    .text-danger{
-        color: #FFBA08;
-        font-size: small;
-        background: transparent;
-        margin-top: -10px ;
-    }
-    .text-input-md{
-        margin: 0 !important;
-    }
+.email {
+  background-color: transparent;
+}
 
-    .email{
-        background-color: transparent;
-    }
+.padding-30 {
+  padding: 30px;
+}
 
-    .padding-30 {
-        padding: 30px;
-    }
+.placeholderEmail {
+  color: #ffffff;
+}
+.placeholderSenha {
+  color: #ffffff;
+}
+.footer {
+  color: #ffffff !important;
+}
 
-    .placeholderEmail{
-        color: #FFFFFF;
-    }
-    .placeholderSenha{
-        color: #FFFFFF;
-    }
-    .footer{
-        color: #FFFFFF !important;
-    }
+.iconeEmail {
+  color: #ffffff;
+}
 
-    .iconeEmail {
-        color: #FFFFFF;
-    }
-
-    .iconeSenha {
-        color: #FFFFFF;
-    }
-
-    
-
-
-
+.iconeSenha {
+  color: #ffffff;
+}
