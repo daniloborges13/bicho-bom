@@ -1,0 +1,61 @@
+<ion-content padding>
+  <div padding>
+    <ion-card>
+      <ion-card-content>
+        <img class="logo" src="./../../assets/imgs/logo-2.png">
+      </ion-card-content>
+    </ion-card>
+
+    <button style="background-color: #3b5998 !important;" ion-button block round (click)="facebook()">Entrar com Facebook</button>
+
+    
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+    <div class="separator" style="color: white;">OU</div>
+
+    <form #form="ngForm" novalidate>
+      <div padding>
+        <!-- email -->
+        <ion-list>
+          <ion-item class="email">
+            <ion-label>
+              <ion-icon class="iconeEmail" name="mail"></ion-icon>
+            </ion-label>
+            <ion-input placeholder="E-mail" class="placeholderEmail" type="text" name="email" [(ngModel)]="user.email"
+              #email="ngModel" required></ion-input>
+          </ion-item>
+          <p *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+            O campo E-mail é obrigatório
+          </p>
+
+          <!-- senha -->
+          <ion-item class="email">
+            <ion-label>
+              <ion-icon class="iconeSenha" name="lock"></ion-icon>
+            </ion-label>
+            <ion-input class="placeholderSenha" type="password" placeholder="Senha" name="password"
+              [(ngModel)]="user.password" #password="ngModel" required></ion-input>
+          </ion-item>
+          <p *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
+            O campo Senha é obrigatório
+          </p>
+
+        </ion-list>
+        <!-- botaoEntrar -->
+        <button ion-button round block color="primary" [disabled]="!form.form.valid" (click)="signIn()">Entrar</button>
+      </div>
+    </form>
+
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button block clear class="btn-clear" (click)="cadastro()">Inscrever-se</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button block clear class="btn-clear" (click)="redefinirSenha()">Redefinir senha</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

@@ -1,0 +1,73 @@
+<ion-content padding>
+  <div padding>
+    <ion-card>
+      <ion-card-content>
+        <img class="logo" src="../../assets/imgs/logo-2.png">
+      </ion-card-content>
+    </ion-card>
+
+    <form #form="ngForm" novalidate>
+      <ion-list>
+        <!-- NOME -->
+        <ion-item class="txtTransparent"> 
+            <ion-label>
+              <ion-icon class="corIcone" name="person"></ion-icon>
+            </ion-label>
+            <ion-input class="placeholderEmail" type="text" placeholder="Nome" name="nome" [(ngModel)]="user.nome" #nome="ngModel" required>
+            </ion-input>
+          </ion-item>
+          <!-- FIM DO NOME -->
+          <p *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+            O campo Nome é obrigatório
+          </p>
+        <!-- EMAIL -->
+        <ion-item class="txtTransparent"> 
+          <ion-label>
+            <ion-icon class="corIcone" name="mail"></ion-icon>
+          </ion-label>
+          <ion-input class="placeholderEmail" type="text" placeholder="E-mail" name="email" [(ngModel)]="user.email" #email="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <!-- FIM DO EMAIL -->
+        <p *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+          O campo E-mail é obrigatório
+        </p>
+        <!-- SENHA -->
+        <ion-item class="txtTransparent">
+          <ion-label>
+            <ion-icon class="corIcone" name="lock"></ion-icon>
+          </ion-label>
+          <ion-input class="placeholderEmail" type="password" placeholder="Senha" name="password" [(ngModel)]="user.password" #password="ngModel"
+            required></ion-input>
+        </ion-item>
+        <!-- FIM DA SENHA -->
+        <p *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
+          O campo Senha é obrigatório
+        </p>
+        <!-- CONFIRMAR SENHA -->
+        <ion-item class="txtTransparent">
+          <ion-label>
+            <ion-icon class="corIcone" name="lock"></ion-icon>
+          </ion-label>
+          <ion-input class="placeholderEmail" type="password" placeholder="Confirmar Senha" name="rePassword" [(ngModel)]="user.rePassword"
+            #rePassword="ngModel" required></ion-input>
+        </ion-item>
+        <!-- FIM DO CONFIRMAR SENHA -->
+        <p *ngIf="rePassword.errors && (rePassword.dirty || rePassword.touched)" class="text-danger">
+          O campo Confirmar Senha é obrigatório
+        </p>
+
+      </ion-list>
+
+      <button ion-button round block color="primary" [disabled]="!form.form.valid" (click)="createAccount()">Criar
+        Conta</button>
+
+    </form>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button block clear class="btn-clear" (click)="login()">Já tem uma conta?</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-content padding>
+  <div padding>
+    <ion-card>
+      <ion-card-content>
+        <img class="logo" src="./../../assets/imgs/logo-2.png">
+      </ion-card-content>
+    </ion-card>
+
+    <form #form="ngForm" novalidate>
+      <ion-list>
+        <ion-item no-lines class="txtTransparent">
+          <ion-label>
+            <ion-icon class="corIcone" name="mail">  </ion-icon>
+          </ion-label>
+          <ion-input class="placeholderEmail" type="text" placeholder="E-mail" name="email" [(ngModel)]="userEmail" #email="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <p *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+          O campo E-mail é obrigatório
+        </p>
+
+      </ion-list>
+
+      <button ion-button round block color="primary" [disabled]="!form.form.valid" (click)="resetPassword()">
+        Enviar Link
+      </button>
+      <p class="txt-login">Verifique seu E-mail e siga as instruções!<br><br>Caso não receba na Caixa de Entrada
+        verifique<br>o Lixo Eletrônico ou Span.</p>
+    </form>
+    <ion-row>
+      <ion-col>
+        <button ion-button block clear class="btn-clear" (click)="login()">Já tem uma conta?</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
