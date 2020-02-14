@@ -6,7 +6,7 @@
       </ion-card-content>
     </ion-card>
 
-    <button style="background-color: #3b5998 !important;" ion-button block round >Entrar com Facebook</button>
+    <ion-button style="background-color: #3b5998 !important;" block round >Entrar com Facebook</ion-button>
 
     
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
@@ -42,18 +42,18 @@
 
         </ion-list>
         <!-- botaoEntrar -->
-        <button ion-button round block color="primary" [disabled]="!form.form.valid" (click)="signIn()">Entrar</button>
+        <ion-button  round block color="primary" [disabled]="!form.form.valid" (click)="signIn()">Entrar</ion-button>
       </div>
     </form>
 
     <ion-row>
       <ion-col col-12>
-        <button ion-button block clear class="btn-clear" (click)="cadastro()">Inscrever-se</button>
+        <ion-button block clear class="btn-clear" (click)="cadastro()">Inscrever-se</ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-12>
-        <button ion-button block clear class="btn-clear" (click)="redefinirSenha()">Redefinir senha</button>
+        <ion-button block clear class="btn-clear" (click)="redefinirSenha()">Redefinir senha</ion-button>
       </ion-col>
     </ion-row>
   </div>
