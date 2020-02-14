@@ -6,9 +6,6 @@ import { LoginPage } from './pages/login/login.page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginPage },
-  { path: 'home', component: HomePage },
-  { path: 'redefinirsenha', component: RedefinirSenhaPage },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
     path: 'login',
