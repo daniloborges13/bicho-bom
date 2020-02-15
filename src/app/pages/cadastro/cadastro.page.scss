@@ -1,8 +1,10 @@
-page-cadastro {
+
     ion-content{
-        background: url('./../../../assets/imgs/fundoLogin.jpg') !important;
+        --background: url("../../../assets/imgs/fundoLogin.jpg") 0 0/100% 100% no-repeat !important;
         background-position: center !important;
         background-size: cover !important;
+        width: 100% !important;
+         height: 100% !important;
         
     }
     .filter{
@@ -13,6 +15,7 @@ page-cadastro {
     ion-card{
         box-shadow: none !important;
         background: transparent !important;
+        margin-left: 100px;
     }
     ion-card-content img{
         width: 130px;
@@ -42,6 +45,7 @@ page-cadastro {
 
     .logo{
         padding: 30px 0;
+       
     }
     .list-md .item-block .item-inner{
         border: none !important;
@@ -50,8 +54,12 @@ page-cadastro {
         border: none !important;
     }
     .btn-clear{
-        font-size: small !important;
+        font-size: medium !important;
         color: #FFFFFF;
+        margin-left: 65px;
+        background-color: transparent !important;
+        padding: 30px;
+        
     }
     .txt-login{
         text-align: center;
@@ -79,4 +87,12 @@ page-cadastro {
         color: #FFFFFF;
     }
 
-}
+    .bg-transparent {
+        background-color: transparent !important;
+    }
+
+    .btnCriarConta{
+        color: --ion-color-primary;
+        margin-left: 45px;
+        margin-right: 45px;
+    }

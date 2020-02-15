@@ -85,14 +85,7 @@ export class LoginPage {
     toast.present();
   }
 
-  redefinirSenha() {
-    this.router.navigate['/redefinirsenha']
-  }
  
-
-  cadastro() {
-    this.router.navigate['cadastro'];
-  }
 
 
 }

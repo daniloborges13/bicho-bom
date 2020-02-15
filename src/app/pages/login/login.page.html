@@ -6,8 +6,8 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-button style="background-color: #3b5998 !important;" block round >Entrar com Facebook</ion-button>
-
+    
+    <ion-button shape="round" class="btn-facebook" color="secondary">Entrar com Facebook</ion-button>
     
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
@@ -15,13 +15,16 @@
 
     <form #form="ngForm" novalidate>
       <div padding>
+
+       
         <!-- email -->
-        <ion-list>
-          <ion-item class="email">
+        <ion-list class="bg-transparent">
+          <ion-item class="email" lines="none" color="none">
             <ion-label>
               <ion-icon class="iconeEmail" name="mail"></ion-icon>
             </ion-label>
-            <ion-input placeholder="E-mail" class="placeholderEmail" type="text" name="email" [(ngModel)]="user.email"
+
+            <ion-input transparent placeholder="E-mail" class="placeholderEmail" type="text" name="email" [(ngModel)]="user.email"
               #email="ngModel" required></ion-input>
           </ion-item>
           <p *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
@@ -29,11 +32,11 @@
           </p>
 
           <!-- senha -->
-          <ion-item class="email">
+          <ion-item class="email" lines="none" color="none">
             <ion-label>
-              <ion-icon class="iconeSenha" name="lock"></ion-icon>
+              <ion-icon class="iconeSenha" name="lock-closed"></ion-icon>
             </ion-label>
-            <ion-input class="placeholderSenha" type="password" placeholder="Senha" name="password"
+            <ion-input transparent class="placeholderSenha" type="password" placeholder="Senha" name="password"
               [(ngModel)]="user.password" #password="ngModel" required></ion-input>
           </ion-item>
           <p *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
@@ -42,18 +45,18 @@
 
         </ion-list>
         <!-- botaoEntrar -->
-        <ion-button  round block color="primary" [disabled]="!form.form.valid" (click)="signIn()">Entrar</ion-button>
+        <ion-button class="btn-color" expand="block" shape="round" block [disabled]="!form.form.valid" (click)="signIn()">Entrar</ion-button>
       </div>
     </form>
 
     <ion-row>
       <ion-col col-12>
-        <ion-button block clear class="btn-clear" (click)="cadastro()">Inscrever-se</ion-button>
+        <ion-button [routerLink]="['/cadastro']" expand="block" shape="clear" class="btn-clear" >Inscrever-se</ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-12>
-        <ion-button block clear class="btn-clear" (click)="redefinirSenha()">Redefinir senha</ion-button>
+        <ion-button [routerLink]="['/redefinir-senha']" expand="block" shape="clear" class="btn-clear">Redefinir senha</ion-button>
       </ion-col>
     </ion-row>
   </div>

@@ -7,9 +7,9 @@
     </ion-card>
 
     <form #form="ngForm" novalidate>
-      <ion-list>
+      <ion-list class="bg-transparent">
         <!-- NOME -->
-        <ion-item class="txtTransparent"> 
+        <ion-item class="txtTransparent" lines="none" color="none"> 
             <ion-label>
               <ion-icon class="corIcone" name="person"></ion-icon>
             </ion-label>
@@ -21,7 +21,7 @@
             O campo Nome é obrigatório
           </p>
         <!-- EMAIL -->
-        <ion-item class="txtTransparent"> 
+        <ion-item class="txtTransparent" lines="none" color="none"> 
           <ion-label>
             <ion-icon class="corIcone" name="mail"></ion-icon>
           </ion-label>
@@ -33,9 +33,9 @@
           O campo E-mail é obrigatório
         </p>
         <!-- SENHA -->
-        <ion-item class="txtTransparent">
+        <ion-item class="txtTransparent" lines="none" color="none">
           <ion-label>
-            <ion-icon class="corIcone" name="lock"></ion-icon>
+            <ion-icon class="corIcone" name="lock-closed"></ion-icon>
           </ion-label>
           <ion-input class="placeholderEmail" type="password" placeholder="Senha" name="password" [(ngModel)]="user.password" #password="ngModel"
             required></ion-input>
@@ -45,9 +45,9 @@
           O campo Senha é obrigatório
         </p>
         <!-- CONFIRMAR SENHA -->
-        <ion-item class="txtTransparent">
+        <ion-item class="txtTransparent" lines="none" color="none">
           <ion-label>
-            <ion-icon class="corIcone" name="lock"></ion-icon>
+            <ion-icon class="corIcone" name="lock-closed"></ion-icon>
           </ion-label>
           <ion-input class="placeholderEmail" type="password" placeholder="Confirmar Senha" name="rePassword" [(ngModel)]="user.rePassword"
             #rePassword="ngModel" required></ion-input>
@@ -59,14 +59,14 @@
 
       </ion-list>
 
-      <button ion-button round block color="primary" [disabled]="!form.form.valid" (click)="createAccount()">Criar
-        Conta</button>
+      <ion-button class="btnCriarConta" ion-button expand="block" shape="round" [disabled]="!form.form.valid" (click)="createAccount()">Criar Conta</ion-button>
+       
 
     </form>
 
     <ion-row>
       <ion-col>
-        <button ion-button block clear class="btn-clear" (click)="login()">Já tem uma conta?</button>
+        <button  [routerLink]="['/login']" ion-button expand="block" shape="clear" class="btn-clear">JÁ TEM UMA CONTA?</button>
       </ion-col>
     </ion-row>
   </div>

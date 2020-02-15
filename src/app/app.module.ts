@@ -1,3 +1,7 @@
+import { CadastroPageModule } from './pages/cadastro/cadastro.module';
+import { LoginPageModule } from './pages/login/login.module';
+import { RedefinirSenhaPage } from './pages/redefinir-senha/redefinir-senha.page';
+import { CadastroPage } from './pages/cadastro/cadastro.page';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { RedefinirSenhaPageModule } from './pages/redefinir-senha/redefinir-senha.module';
+import { firebaseConfig } from './services/firebase/firebase';
 
 
 @NgModule({
@@ -24,23 +30,21 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
      IonicModule.forRoot(),
      AppRoutingModule,
      HttpClientModule,
-     AngularFireModule.initializeApp({
-      apiKey: "AIzaSyBklUWBRPTL-ROMd2DX0QiDHWCZPKqf5Fk",
-      authDomain: "bichobom-danilo.firebaseapp.com",
-      databaseURL: "https://bichobom-danilo.firebaseio.com",
-      projectId: "bichobom-danilo",
-      storageBucket: "bichobom-danilo.appspot.com",
-      messagingSenderId: "6341201958",
-      appId: "1:6341201958:web:4122e70edf757cc9"
-     }),
+     AngularFireModule.initializeApp(firebaseConfig),
      AngularFirestoreModule,
-     AngularFireDatabaseModule
+     AngularFireDatabaseModule,
+     CadastroPageModule,
+     LoginPageModule,
+     RedefinirSenhaPageModule
     ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AngularFireAuth
+    AngularFireAuth,
+    CadastroPage,
+    RedefinirSenhaPage
+
   ],
   bootstrap: [AppComponent]
 })

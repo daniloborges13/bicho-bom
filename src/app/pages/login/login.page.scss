@@ -28,6 +28,7 @@ ion-content {
 ion-card {
   box-shadow: none !important;
   background: transparent !important;
+  margin-left: 100px;
 }
 ion-card-content img {
   width: 130px;
@@ -61,6 +62,7 @@ ion-item {
 }
 .logo {
   padding: 10px 0;
+ 
 }
 .list-md .item-block .item-inner {
   border: none !important;
@@ -71,6 +73,7 @@ ion-item {
 .btn-clear {
   font-size: small !important;
   color: #ffffff;
+  background: transparent;
 }
 .txt-login {
   text-align: center;
@@ -86,8 +89,23 @@ ion-item {
   margin: 0 !important;
 }
 
-.email {
-  background-color: transparent;
+.btn-color{
+  color: --ion-color-primary;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.btn-facebook{
+  color: --ion-color-secondary !important;
+  margin-left: 65px;
+  margin-right: 80px;
+  margin-top: 0px
+
+}
+
+
+.bg-transparent {
+  background-color: transparent !important;
 }
 
 .padding-30 {
@@ -96,7 +114,9 @@ ion-item {
 
 .placeholderEmail {
   color: #ffffff;
+ 
 }
+
 .placeholderSenha {
   color: #ffffff;
 }

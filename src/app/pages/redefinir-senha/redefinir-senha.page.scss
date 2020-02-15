@@ -1,9 +1,10 @@
  
     ion-content{
-        background: url('./../../../assets/imgs/fundoLogin.jpg') !important;
+        --background: url('./../../../assets/imgs/fundoLogin.jpg') 0 0/100% 100% no-repeat !important;
         background-position: center !important;
         background-size: cover !important;
-        
+        width: 100% !important;
+        height: 100% !important;
     }
     .filter{
         width: 100vw;
@@ -14,6 +15,7 @@
         ion-card{
             box-shadow: none !important;
             background: transparent !important;
+            margin-left: 100px;
         }
         
         ion-card-content img{
@@ -79,6 +81,10 @@
 
         .placeholderEmail{
             color: #FFFFFF;
+        }
+
+        .bg-transparent{
+            background-color: transparent !important;
         }
 
 
