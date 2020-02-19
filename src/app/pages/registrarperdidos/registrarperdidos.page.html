@@ -1,0 +1,56 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar Animais Perdidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <ion-item class="txtTransparent"> 
+    <ion-input class="placeholderEmail" type="text" placeholder="Nome do animal" name="email"   required></ion-input>
+  </ion-item>
+
+  <ion-item class="txtTransparent"> 
+    <ion-input class="placeholderEmail" type="text" placeholder="Proprietário" name="email"   required></ion-input>
+  </ion-item>
+
+  <ion-item class="txtTransparent" > 
+    <ion-input class="placeholderEmail" type="number" placeholder="Ex: (99)9 99999-9999" name="email"   required></ion-input>
+  </ion-item>
+
+  <ion-item class="txtTransparent"> 
+    <ion-textarea class="placeholderEmail" placeholder="Observações..."></ion-textarea>
+    
+  </ion-item>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+         <div class="text-center">      
+          <b style="text-align:center;" class="upload">
+           Faça upload da foto do animal perdido
+          </b>   
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
+  <ion-button expand="block" shape="round" color="primary">
+    Upload
+    <ion-icon  slot="end"  name="cloud-upload-sharp"></ion-icon>
+  </ion-button>
+
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+  <ion-button expand="block" shape="round" color="primary">
+    Cadastrar animal perdido
+    <ion-icon slot="end" name="checkmark-circle-sharp"></ion-icon>
+  </ion-button>
+
+
+</ion-content>

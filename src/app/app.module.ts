@@ -1,7 +1,7 @@
+import { RegistrarperdidosPageModule } from './pages/registrarperdidos/registrarperdidos.module';
+import { DoacaoPageModule } from './pages/doacao/doacao.module';
 import { CadastroPageModule } from './pages/cadastro/cadastro.module';
 import { LoginPageModule } from './pages/login/login.module';
-import { RedefinirSenhaPage } from './pages/redefinir-senha/redefinir-senha.page';
-import { CadastroPage } from './pages/cadastro/cadastro.page';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -35,15 +35,15 @@ import { firebaseConfig } from './services/firebase/firebase';
      AngularFireDatabaseModule,
      CadastroPageModule,
      LoginPageModule,
-     RedefinirSenhaPageModule
+     RedefinirSenhaPageModule,
+     DoacaoPageModule,
+     RegistrarperdidosPageModule
     ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AngularFireAuth,
-    CadastroPage,
-    RedefinirSenhaPage
+    AngularFireAuth
 
   ],
   bootstrap: [AppComponent]

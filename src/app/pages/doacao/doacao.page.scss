@@ -1,0 +1,26 @@
+b.upload{
+    text-align: center;
+    align-items: center;
+}
+
+ion-content {
+    div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+   }
+
+   ion-content {
+    width: 100% !important;
+    height: 100% !important;
+    --ion-background-color: rgb(65, 182, 240);
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .placeholderEmail{
+    --color: #000000;
+  }

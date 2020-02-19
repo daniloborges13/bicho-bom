@@ -5,7 +5,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginPage } from './pages/login/login.page';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
     path: 'login',
@@ -19,6 +19,19 @@ const routes: Routes = [
     path: 'redefinir-senha',
     loadChildren: () => import('./pages/redefinir-senha/redefinir-senha.module').then( m => m.RedefinirSenhaPageModule)
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },  {
+    path: 'doacao',
+    loadChildren: () => import('./pages/doacao/doacao.module').then( m => m.DoacaoPageModule)
+  },
+  {
+    path: 'registrarperdidos',
+    loadChildren: () => import('./pages/registrarperdidos/registrarperdidos.module').then( m => m.RegistrarperdidosPageModule)
+  },
+
+
 
 ];
 
