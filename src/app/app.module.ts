@@ -2,7 +2,7 @@ import { RegistrarperdidosPageModule } from './pages/registrarperdidos/registrar
 import { DoacaoPageModule } from './pages/doacao/doacao.module';
 import { CadastroPageModule } from './pages/cadastro/cadastro.module';
 import { LoginPageModule } from './pages/login/login.module';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -17,7 +17,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { RedefinirSenhaPageModule } from './pages/redefinir-senha/redefinir-senha.module';
 import { firebaseConfig } from './services/firebase/firebase';
@@ -31,7 +30,6 @@ import { firebaseConfig } from './services/firebase/firebase';
      AppRoutingModule,
      HttpClientModule,
      AngularFireModule.initializeApp(firebaseConfig),
-     AngularFirestoreModule,
      AngularFireDatabaseModule,
      CadastroPageModule,
      LoginPageModule,

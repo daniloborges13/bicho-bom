@@ -16,8 +16,8 @@ import { Router } from '@angular/router';
 export class LoginPage {
 
   user: User = new User();
-  @ViewChild('form', {static: true}) form: NgForm;
-  loading: any;
+  @ViewChild('form', { static: true }) form: NgForm;
+  loading: HTMLIonLoadingElement;
 
   constructor(
     public navCtrl: NavController,
@@ -27,15 +27,17 @@ export class LoginPage {
     private router: Router
   ) { }
 
-  
+  facebookLogin() {
+    this.loginService.signInFacebook();
+  }
 
 
-  signIn() {
-    this.showLoading();
+  async signIn() {
+    await this.showLoading();
     if (this.form.form.valid) {
       this.loginService.signIn(this.user)
         .then((data) => {
-          this.router.navigate['/home']
+          this.router.navigate(['/home']);
           this.dismissLoading();
         })
         .catch((error: any) => {
@@ -55,9 +57,9 @@ export class LoginPage {
     }
   }
 
-   showLoading() {
+  async showLoading() {
     if (!this.loading) {
-       this.loading = this.loadCtrl.create({
+      this.loading = await this.loadCtrl.create({
         message: `
           <div class="custom-spinner-container">
             <div class="custom-spinner-box">
@@ -65,8 +67,8 @@ export class LoginPage {
             </div>
           </div>`
       });
-      this.loading.present();
     }
+    this.loading.present();
   }
 
   dismissLoading() {
@@ -85,7 +87,7 @@ export class LoginPage {
     toast.present();
   }
 
- 
+
 
 
 }
