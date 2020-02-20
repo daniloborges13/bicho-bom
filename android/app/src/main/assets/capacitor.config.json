@@ -1,8 +1,27 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.bichobom",
   "appName": "bichoBom",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
-  "cordova": {}
+  "cordova": {},
+  "plugins": {
+    "CapacitorFirebaseAuth": {
+      "providers": [
+        "google.com",
+        "facebook.com"
+      ],
+      "languageCode": "en",
+      "permissions": {
+        "google": [
+          "profile",
+          "https://www.googleapis.com/auth/drive"
+        ]
+      }
+    }
+  },
+  "server": {
+    "url": "http://192.168.0.20:8100",
+    "cleartext": true
+  }
 }

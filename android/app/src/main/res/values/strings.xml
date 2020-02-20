@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">bichoBom</string>
     <string name="title_activity_main">bichoBom</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="package_name">com.bichobom</string>
+    <string name="custom_url_scheme">com.bichobom</string>
+    <string name="facebook_app_id">862388254198920</string>
+    <string name="fb_login_protocol_scheme">fb862388254198920://authorize</string>
 </resources>

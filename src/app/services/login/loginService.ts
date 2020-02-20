@@ -4,6 +4,15 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Observable } from 'rxjs/internal/Observable';
 
+import { User as FirebaseUser } from 'firebase/app';
+import { cfaSignIn } from 'capacitor-firebase-auth';
+
+import { Capacitor } from '@capacitor/core';
+
+const { platform } = Capacitor;
+
+
+
 const { FacebookAuthProvider } = auth;
 
 
@@ -28,7 +37,11 @@ export class LoginService {
   }
 
   async signInFacebook() {
-    return await this.angularFireAuth.auth.signInWithPopup(new FacebookAuthProvider());
+    if (platform === 'web') {
+      return await this.angularFireAuth.auth.signInWithPopup(new FacebookAuthProvider());
+    } else {
+      return await cfaSignIn('facebook.com').toPromise<FirebaseUser>();
+    }
   }
 
   async signOut(): Promise<any> {

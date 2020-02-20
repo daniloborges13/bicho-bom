@@ -27,8 +27,23 @@ export class LoginPage {
     private router: Router
   ) { }
 
-  facebookLogin() {
-    this.loginService.signInFacebook();
+  async facebookLogin() {
+    try {
+      await this.loginService.signInFacebook();
+      this.router.navigate(['/inicio']);
+    } catch (error) {
+      if (error.code == 'auth/invalid-email') {
+        this.toast('O e-mail digitado não é valido.');
+      } else if (error.code == 'auth/user-disabled') {
+        this.toast('O usuário está desativado.');
+      } else if (error.code == 'auth/user-not-found') {
+        this.toast('O usuário não foi encontrado.');
+      } else if (error.code == 'auth/wrong-password') {
+        this.toast('A senha digitada não é valida.');
+      } else {
+        this.toast('Você está off-line.');
+      }
+    }
   }
 
 
@@ -37,7 +52,7 @@ export class LoginPage {
     if (this.form.form.valid) {
       this.loginService.signIn(this.user)
         .then((data) => {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/inicio']);
           this.dismissLoading();
         })
         .catch((error: any) => {
@@ -79,7 +94,7 @@ export class LoginPage {
   }
 
   async toast(msg: string) {
-    let toast = await this.toastCtrl.create({
+    const toast = await this.toastCtrl.create({
       message: msg,
       duration: 1500,
       position: 'bottom'
