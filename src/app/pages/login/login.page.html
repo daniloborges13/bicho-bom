@@ -7,7 +7,7 @@
     </ion-card>
 
     
-    <ion-button (click)="facebookLogin()" shape="round" class="btn-facebook" color="secondary">Entrar com Facebook</ion-button>
+    <ion-button (click)="facebookLogin()" shape="round" class="btn-facebook" color="primary">Entrar com Facebook</ion-button>
     
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
@@ -45,7 +45,7 @@
 
         </ion-list>
         <!-- botaoEntrar -->
-        <ion-button class="btn-color" expand="block" shape="round" block [disabled]="!form.form.valid" (click)="signIn()">Entrar</ion-button>
+        <ion-button class="btn-color" color="secondary" expand="block" shape="round" block [disabled]="!form.form.valid" (click)="signIn()">Entrar</ion-button>
       </div>
     </form>
 

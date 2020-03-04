@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { LoginService } from 'src/app/services/login/loginService';
 import { LoginPage } from '../login/login.page';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
@@ -11,29 +11,37 @@ import { Router } from '@angular/router';
   templateUrl: './redefinir-senha.page.html',
   styleUrls: ['./redefinir-senha.page.scss'],
 })
-export class RedefinirSenhaPage {
+export class RedefinirSenhaPage implements OnInit {
 
   constructor(
     private toastCtrl: ToastController,
     private loginService: LoginService,
-    private router: Router
-    
+    private router: Router,
+    private formBuilder: FormBuilder
+
   ) { }
 
-    form: FormGroup;
+  ngOnInit() {
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
 
-   async resetPassword() {
+  form: FormGroup;
+
+  async resetPassword() {
     if (this.form.valid) {
 
-      let toast = await this.toastCtrl.create({ 
+      let toast = await this.toastCtrl.create({
         message: 'Sua solicitação foi enviada ao seu email',
         duration: 3000,
-        position: 'bottom' });
+        position: 'bottom'
+      });
       this.loginService.resetPassword(this.form.get('email').value)
         .then(() => {
-         
-        this.router.navigate['/login'];  
-          
+
+          this.router.navigate['/login'];
+
         })
         .catch((error: any) => {
           if (error.code == 'auth/invalid-email') {
@@ -48,8 +56,8 @@ export class RedefinirSenhaPage {
   }
 
 
-  login(){
-    this.router.navigate['/login'];  
+  login() {
+    this.router.navigate['/login'];
   }
 
 }

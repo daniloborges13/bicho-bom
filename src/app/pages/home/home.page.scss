@@ -12,7 +12,19 @@ div.figure {
   ion-content {
     width: 100% !important;
     height: 100% !important;
-    --ion-background-color: rgb(65, 182, 240);;
     background-size: cover !important;
     background-position: center !important;
+  }
+
+  .toolbar-container{
+    --ion-color: primary;
+  }
+
+  .ion-toolbar{
+    --ion-background-color: #ff3700;
+  }
+
+
+  .toolbar{
+    --background: #000000;
   }

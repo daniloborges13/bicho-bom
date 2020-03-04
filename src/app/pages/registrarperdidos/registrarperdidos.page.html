@@ -1,5 +1,5 @@
 <ion-header translucent>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -8,20 +8,23 @@
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
+  <form [formGroup]="formPerdidos" novalidate (submit)="salvarPerdidos()"> 
+
+  
   <ion-item class="txtTransparent"> 
-    <ion-input class="placeholderEmail" type="text" placeholder="Nome do animal" name="email"   required></ion-input>
+    <ion-input formControlName="nomePet"  class="placeholderEmail" type="text" placeholder="Nome do animal" name="email" required></ion-input>
   </ion-item>
 
   <ion-item class="txtTransparent"> 
-    <ion-input class="placeholderEmail" type="text" placeholder="Proprietário" name="email"   required></ion-input>
+    <ion-input formControlName="proprietario" class="placeholderEmail" type="text" placeholder="Proprietário" name="email" required></ion-input>
   </ion-item>
 
   <ion-item class="txtTransparent" > 
-    <ion-input class="placeholderEmail" type="number" placeholder="Ex: (99)9 99999-9999" name="email"   required></ion-input>
+    <ion-input formControlName="telefone"  class="placeholderEmail" type="number" placeholder="Ex: (99)9 99999-9999" name="email" required></ion-input>
   </ion-item>
 
   <ion-item class="txtTransparent"> 
-    <ion-textarea class="placeholderEmail" placeholder="Observações..."></ion-textarea>
+    <ion-textarea formControlName="obs" class="placeholderEmail" placeholder="Observações..."></ion-textarea>
     
   </ion-item>
 
@@ -47,10 +50,10 @@
 
   <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
-  <ion-button expand="block" shape="round" color="primary">
+  <ion-button [disabled]="!formPerdidos.valid" type="submit" expand="block" shape="round" color="primary">
     Cadastrar animal perdido
     <ion-icon slot="end" name="checkmark-circle-sharp"></ion-icon>
   </ion-button>
 
-
+</form>
 </ion-content>

@@ -1,5 +1,5 @@
 <ion-header translucent>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -8,39 +8,40 @@
 </ion-header>
 <ion-content fullscreen class="ion-padding">
 
+  <form [formGroup]="formDoacao" novalidate (submit)="salvarDoacao()"> 
 
   <ion-item class="txtTransparent"  > 
-    <ion-input class="placeholderEmail" type="text" placeholder="Nome do pet" name="email"   required></ion-input>
+    <ion-input formControlName="nomePet" class="placeholderEmail" type="text" placeholder="Nome do pet" name="email" required></ion-input>
   </ion-item>
 
 
   <ion-item class="txtTransparent" > 
-    <ion-input class="placeholderEmail" type="text" placeholder="Raça" name="email" required></ion-input>
+    <ion-input formControlName="raca" class="placeholderEmail" type="text" placeholder="Raça" name="email" required></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Pet</ion-label>
-    <ion-select value="dog">
-      <ion-select-option value="cat">Macho</ion-select-option>
-      <ion-select-option value="dog">Fêmea</ion-select-option>
+    <ion-select formControlName="sexo">
+      <ion-select-option value="macho">Macho</ion-select-option>
+      <ion-select-option value="femea">Fêmea</ion-select-option>
     </ion-select>
   </ion-item>
 
 
   <ion-grid>
-    <ion-radio-group value="grape">
+    <ion-radio-group formControlName="tipoPet" value="grape">
       <ion-row>
         <ion-col col-6> 
           <ion-item>
-            <img src="../../../assets/icon/cachorro.png" alt="" srcset="">
-            <ion-radio slot="start" color="primary" value="dog"></ion-radio>
+            <img src="../../../assets/icon/cachorro.png">
+            <ion-radio slot="start" color="primary" value="cachorro"></ion-radio>
           </ion-item>
         </ion-col>
 
         <ion-col col-6> 
           <ion-item >
-            <img src="../../../assets/icon/gato.png" alt="" srcset="">
-            <ion-radio slot="start" color="primary" value="cat"></ion-radio>
+            <img src="../../../assets/icon/gato.png">
+            <ion-radio slot="start" color="primary" value="gato"></ion-radio>
           </ion-item>
       </ion-col>
     </ion-row>
@@ -63,18 +64,18 @@
   </ion-grid>
 
  
-  <ion-button expand="block" shape="round" color="primary">
+  <ion-button expand="block" shape="round" color="primary" (click)="openGalery()">
     Upload
     <ion-icon  slot="end"  name="cloud-upload-sharp"></ion-icon>
   </ion-button>
 
-  <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+  <br> <br> <br> <br> 
 
-  <ion-button expand="block" shape="round" color="primary">
+  <ion-button [disabled]="!formDoacao.valid" type="submit" expand="block" shape="round" color="primary">
     Cadastrar animal para doação
     <ion-icon slot="end" name="checkmark-circle-sharp"></ion-icon>
   </ion-button>
 
-
+</form>
   
 </ion-content>

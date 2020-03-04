@@ -11,6 +11,7 @@
         "google.com",
         "facebook.com"
       ],
+      "nativeAuth": false,
       "languageCode": "en",
       "permissions": {
         "google": [
@@ -19,9 +20,5 @@
         ]
       }
     }
-  },
-  "server": {
-    "url": "http://192.168.0.20:8100",
-    "cleartext": true
   }
 }

@@ -40,7 +40,8 @@ export class LoginService {
     if (platform === 'web') {
       return await this.angularFireAuth.auth.signInWithPopup(new FacebookAuthProvider());
     } else {
-      return await cfaSignIn('facebook.com').toPromise<FirebaseUser>();
+      const provider = new FacebookAuthProvider();
+      return await cfaSignIn(provider.providerId).toPromise<FirebaseUser>();
     }
   }
 
