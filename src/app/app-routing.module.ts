@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'registrarperdidos',
     loadChildren: () => import('./pages/registrarperdidos/registrarperdidos.module').then( m => m.RegistrarperdidosPageModule)
+  },  {
+    path: 'adote',
+    loadChildren: () => import('./pages/adote/adote.module').then( m => m.AdotePageModule)
   },
+
 
 
 
