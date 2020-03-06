@@ -19,12 +19,20 @@
     <ion-input formControlName="raca" class="placeholderEmail" type="text" placeholder="Raça" name="email" required></ion-input>
   </ion-item>
 
+  <ion-item class="txtTransparent" > 
+    <ion-input formControlName="celular" class="placeholderEmail" placeholder="Celular p/ contato com DDD" [brmasker]="{mask:'(99)9 9999-9999', len:15}" name="email" required></ion-input>
+  </ion-item>
+
   <ion-item>
     <ion-label>Pet</ion-label>
     <ion-select formControlName="sexo">
       <ion-select-option value="macho">Macho</ion-select-option>
       <ion-select-option value="femea">Fêmea</ion-select-option>
     </ion-select>
+  </ion-item>
+
+  <ion-item class="txtTransparent"> 
+    <ion-textarea formControlName="obs" class="placeholderEmail" placeholder="Observações..."></ion-textarea>
   </ion-item>
 
 
@@ -47,8 +55,6 @@
     </ion-row>
     </ion-radio-group>
   </ion-grid>
-
-  <hr>
 
   <ion-grid>
     <ion-row>

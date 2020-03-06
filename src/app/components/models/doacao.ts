@@ -6,5 +6,7 @@ export class Doacao {
     raca: string;
     sexo: string;
     tipoPet: string;
+    celular: number;
+    obs: string;
     dataDoacao: Timestamp<any>;
 }

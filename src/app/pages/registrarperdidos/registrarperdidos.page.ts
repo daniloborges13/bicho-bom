@@ -21,7 +21,7 @@ export class RegistrarperdidosPage implements OnInit {
     this.formPerdidos = this.frmBuilder.group({
       nomePet: ['', Validators.required],
       proprietario: ['', Validators.required],
-      telefone: ['', Validators.required],
+      celular: ['', Validators.required],
       obs: ['', Validators.required],
       dataPerdido: [new Date()]
     })

@@ -4,7 +4,7 @@ export class Perdidos {
     id?: string;
     nomePet: string;
     proprietario: string;
-    telefone: string;
+    celular: string;
     obs: string;
     dataPerdido: Timestamp<any>;
 }

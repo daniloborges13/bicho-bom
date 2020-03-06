@@ -9,13 +9,16 @@ import { RegistrarperdidosPageRoutingModule } from './registrarperdidos-routing.
 import { RegistrarperdidosPage } from './registrarperdidos.page';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { BrMaskerModule } from 'br-mask';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     RegistrarperdidosPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrMaskerModule
   ],
   declarations: [RegistrarperdidosPage]
 })

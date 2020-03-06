@@ -9,6 +9,7 @@ import { DoacaoPageRoutingModule } from './doacao-routing.module';
 import { DoacaoPage } from './doacao.page';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrMaskerModule } from 'br-mask';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IonicModule,
     DoacaoPageRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrMaskerModule
   ],
   declarations: [DoacaoPage]
 })

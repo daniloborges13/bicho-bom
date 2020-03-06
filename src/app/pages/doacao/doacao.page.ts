@@ -38,6 +38,8 @@ export class DoacaoPage implements OnInit {
       raca: ['', Validators.required],
       sexo: ['', Validators.required],
       tipoPet: ['', Validators.required],
+      celular: ['', Validators.required],
+      obs: ['', Validators.required],
       dataDoacao: [new Date()]
     })
   }
