@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'adote',
     loadChildren: () => import('./pages/adote/adote.module').then( m => m.AdotePageModule)
   },
+  {
+    path: 'sobre',
+    loadChildren: () => import('./pages/sobre/sobre.module').then( m => m.SobrePageModule)
+  },
 
 
 
