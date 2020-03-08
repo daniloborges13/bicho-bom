@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'sobre',
     loadChildren: () => import('./pages/sobre/sobre.module').then( m => m.SobrePageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 
 
 

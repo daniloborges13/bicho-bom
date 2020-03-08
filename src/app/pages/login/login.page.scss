@@ -30,10 +30,13 @@ ion-card {
   background: transparent !important;
   margin-left: 100px;
 }
-ion-card-content img {
+ion-card-content ion-img {
   width: 130px;
-  height: auto;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  
 }
 .title {
   text-align: center;
@@ -60,10 +63,7 @@ ion-item {
   box-shadow: none !important;
   border-bottom: 1px #ccc solid !important;
 }
-.logo {
-  padding: 10px 0;
- 
-}
+
 .list-md .item-block .item-inner {
   border: none !important;
 }
@@ -75,6 +75,21 @@ ion-item {
   color: #ffffff;
   background: transparent;
 }
+
+
+.btn-color{
+  color: --ion-color-primary;
+  
+}
+
+.btn-facebook{
+  color: --ion-color-secondary !important;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 0px
+
+}
+
 .txt-login {
   text-align: center;
   font-size: smaller;
@@ -89,18 +104,9 @@ ion-item {
   margin: 0 !important;
 }
 
-.btn-color{
-  color: --ion-color-primary;
-  margin-left: 45px;
-  margin-right: 45px;
-}
 
-.btn-facebook{
-  color: --ion-color-secondary !important;
-  margin-left: 70px;
-  margin-top: 0px
 
-}
+
 
 
 .bg-transparent {
