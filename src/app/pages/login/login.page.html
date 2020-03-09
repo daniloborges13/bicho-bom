@@ -1,19 +1,22 @@
-<ion-content padding class="ion-text-center">
-  <div padding>
+<ion-content class="ion-padding" class="ion-text-center">
+  <div class="ion-padding">
 
-    <ion-row>
-      <ion-col size="12"> 
-        <ion-card >
-          <ion-card-content class="logoCenter" class="ion-text-center">
-            <ion-img class="ion-text-center" src="./../../assets/imgs/logo-2.png"></ion-img>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+    <br> <br>
 
+    <ion-avatar class="avatar">
+      <img src="./../../../assets/icon/logoofc.jpg">
+    </ion-avatar>
 
-    <ion-button (click)="facebookLogin()" expand="block" shape="round" class="btn-facebook" color="primary">Entrar com
-      Facebook</ion-button>
+    <div class="ion-text-center">
+      <h2 style="color: white;">BICHO BOM</h2>
+    </div>
+
+    <br>
+
+    <ion-button (click)="facebookLogin()" expand="block" shape="round" color="primary">
+      Entrar com Facebook
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+    </ion-button>
 
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 

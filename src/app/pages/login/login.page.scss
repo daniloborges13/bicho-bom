@@ -83,14 +83,6 @@ ion-item {
   
 }
 
-.btn-facebook{
-  color: --ion-color-secondary !important;
-  margin-left: 45px;
-  margin-right: 45px;
-  margin-top: 0px
-
-}
-
 .txt-login {
   text-align: center;
   font-size: smaller;
@@ -106,6 +98,17 @@ ion-item {
 }
 
 .logoCenter{
+  margin: auto;
+}
+
+ion-avatar{
+  width:100% !important;  
+  height : 100% !important;  
+  max-width: 100px !important;  //any size
+  max-height: 100px !important; //any size 
+}
+
+.avatar{
   margin: auto;
 }
 
