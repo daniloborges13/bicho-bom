@@ -1,11 +1,11 @@
 import { DoacaoProvider } from './../../services/doacao/doacao';
 import { Platform } from '@ionic/angular';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { File } from '@ionic-native/file/ngx';
+
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+import { Capacitor, Plugins, CameraResultType, FilesystemDirectory, Filesystem, Camera } from '@capacitor/core';
 
 
 
@@ -16,14 +16,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class DoacaoPage implements OnInit {
 
+  
+ 
   doacao: any = {};
 
   formDoacao: FormGroup;
 
   constructor(
-    private camera: Camera,
     private platform: Platform,
-    private file: File,
     private afStorage: AngularFireStorage,
     private frmBuilder: FormBuilder,
     private doadaoPvd: DoacaoProvider
@@ -62,42 +62,57 @@ export class DoacaoPage implements OnInit {
     }
   }
 
+  
+
 
   async openGalery(){
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.FILE_URI,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE,
-      correctOrientation: true
+
+    const options = {
+      resultType: CameraResultType.Uri
     };
 
-    try{
-      const fileUri: string = await this.camera.getPicture(options);
+    Camera.getPhoto(options).then(
+      photo => {
+        Filesystem.readFile({
+          path: photo.path
+        }).then(
+          result => {
+            let date = new Date(),
+              time = date.getTime(),
+              fileName = time + ".jpeg";
 
-      let file: string;
-
-      if (this.platform.is('ios')){
-        file = fileUri.split('/').pop();
-      } else {
-        file = fileUri.substring(fileUri.lastIndexOf('/') + 1, fileUri.indexOf('?') )
+            Filesystem.writeFile({
+              data: result.data,
+              path: fileName,
+              directory: FilesystemDirectory.Data
+            }).then(
+              () => {
+                Filesystem.getUri({
+                  directory: FilesystemDirectory.Data,
+                  path: fileName
+                }).then(
+                  result => {
+                    let path = Capacitor.convertFileSrc(result.uri);
+                    console.log(path);
+                  },
+                  err => {
+                    console.log(err);
+                  }
+                );
+              },
+              err => {
+                console.log(err);
+              }
+            );
+          },
+          err => {
+            console.log(err);
+          }
+        );
+      },
+      err => {
+        console.log(err);
       }
-
-      const path: string = fileUri.substring(0, fileUri.lastIndexOf('/'));
-
-      const buffer: ArrayBuffer = await this.file.readAsArrayBuffer(path, file);
-      const blob: Blob = new Blob([buffer], {type: 'image/jpeg'});
-
-      this.uploadPicture(blob);
-    }catch(error){
-      console.log(error)
-    }
+    );
   }
-
-  uploadPicture(blob: Blob){
-    const ref = this.afStorage.ref('doacao/ionic.jpg');
-    const task = ref.put(blob);
-  }
-
 }
