@@ -3,9 +3,6 @@ import { User } from 'src/app/components/models/model';
 import { NgForm } from '@angular/forms';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import { LoginService } from 'src/app/services/login/loginService';
-import { HomePage } from 'src/app/home/home.page';
-import { CadastroPage } from '../cadastro/cadastro.page';
-import { RedefinirSenhaPage } from '../redefinir-senha/redefinir-senha.page';
 import { Router } from '@angular/router';
 
 @Component({
@@ -46,7 +43,6 @@ export class LoginPage {
       }
     }
   }
-
 
   async signIn() {
     await this.showLoading();
@@ -102,8 +98,4 @@ export class LoginPage {
     });
     toast.present();
   }
-
-
-
-
 }

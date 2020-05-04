@@ -28,8 +28,8 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 
-import {AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { PerdidosProvider } from './services/perdidos/perdidos';
 
 

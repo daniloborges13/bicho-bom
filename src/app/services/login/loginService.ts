@@ -10,12 +10,7 @@ import { cfaSignIn } from 'capacitor-firebase-auth';
 import { Capacitor } from '@capacitor/core';
 
 const { platform } = Capacitor;
-
-
-
 const { FacebookAuthProvider } = auth;
-
-
 
 @Injectable()
 export class LoginService {

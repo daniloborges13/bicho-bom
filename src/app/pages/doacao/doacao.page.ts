@@ -1,13 +1,12 @@
 import { DoacaoProvider } from './../../services/doacao/doacao';
-import { Platform } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { Capacitor, Plugins, CameraResultType, FilesystemDirectory, Filesystem, Camera } from '@capacitor/core';
+import { CameraResultType, Plugins } from '@capacitor/core';
 
-
+const { Camera } = Plugins;
 
 @Component({
   selector: 'app-doacao',
@@ -15,22 +14,14 @@ import { Capacitor, Plugins, CameraResultType, FilesystemDirectory, Filesystem, 
   styleUrls: ['./doacao.page.scss'],
 })
 export class DoacaoPage implements OnInit {
-
-  
- 
   doacao: any = {};
-
   formDoacao: FormGroup;
 
   constructor(
-    private platform: Platform,
-    private afStorage: AngularFireStorage,
+    private fireStorage: AngularFireStorage,
     private frmBuilder: FormBuilder,
     private doadaoPvd: DoacaoProvider
-
   ) { }
-
-  
 
   ngOnInit() {
     this.formDoacao = this.frmBuilder.group({
@@ -41,78 +32,51 @@ export class DoacaoPage implements OnInit {
       celular: ['', Validators.required],
       obs: ['', Validators.required],
       dataDoacao: [new Date()]
-    })
+    });
   }
 
-  salvarDoacao(){
-    
-    if(this.formDoacao.valid){
-      this.doadaoPvd.addDoacao(this.formDoacao.value)
-        .then(() => {
-          console.log('deu bao dmais soo')
-          this.formDoacao.reset();
-          this.doadaoPvd.dismissLoading();
-          this.doadaoPvd.toastMsg('Doação realizada com sucesso!')
-        })
-        .catch((erro) => {
-          console.log(erro);
-          this.doadaoPvd.dismissLoading();
-          this.doadaoPvd.toastMsg('Erro ao realizar a doação');
-        })
+  async salvarDoacao() {
+    if (this.formDoacao.valid) {
+      try {
+        await this.doadaoPvd.addDoacao(this.formDoacao.value);
+        console.log('deu bao dmais soo');
+        this.formDoacao.reset();
+        this.doadaoPvd.dismissLoading();
+        this.doadaoPvd.toastMsg('Doação realizada com sucesso!');
+      } catch (erro) {
+        console.log(erro);
+        this.doadaoPvd.dismissLoading();
+        this.doadaoPvd.toastMsg('Erro ao realizar a doação');
+      }
     }
   }
 
-  
-
-
-  async openGalery(){
-
+  async openGalery() {
     const options = {
-      resultType: CameraResultType.Uri
+      quality: 90,
+      resultType: CameraResultType.Base64
     };
 
-    Camera.getPhoto(options).then(
-      photo => {
-        Filesystem.readFile({
-          path: photo.path
-        }).then(
-          result => {
-            let date = new Date(),
-              time = date.getTime(),
-              fileName = time + ".jpeg";
+    const photo = await Camera.getPhoto(options);
+    const time = (new Date()).getTime();
+    const fileName = time + '.jpeg';
 
-            Filesystem.writeFile({
-              data: result.data,
-              path: fileName,
-              directory: FilesystemDirectory.Data
-            }).then(
-              () => {
-                Filesystem.getUri({
-                  directory: FilesystemDirectory.Data,
-                  path: fileName
-                }).then(
-                  result => {
-                    let path = Capacitor.convertFileSrc(result.uri);
-                    console.log(path);
-                  },
-                  err => {
-                    console.log(err);
-                  }
-                );
-              },
-              err => {
-                console.log(err);
-              }
-            );
-          },
-          err => {
-            console.log(err);
-          }
-        );
-      },
-      err => {
-        console.log(err);
+    const uploaded = await this.fireStorage.upload(`doacao/${fileName}`, this.b64toBlob(photo.base64String, 'image/jpeg'));
+  }
+
+  b64toBlob(b64Data, contentType = '', sliceSize = 512) {
+    const byteCharacters = window.atob(b64Data);
+    const byteArrays = [];
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      const slice = byteCharacters.slice(offset, offset + sliceSize);
+      const byteNumbers = new Array(slice.length);
+      for (let i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
       }
-    );
+      const byteArray = new Uint8Array(byteNumbers);
+      byteArrays.push(byteArray);
+    }
+    const blob = new Blob(byteArrays, {type: contentType});
+    return blob;
   }
 }
