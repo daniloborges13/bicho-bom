@@ -1,6 +1,6 @@
 {
   "appId": "com.bichobom",
-  "appName": "bichoBom",
+  "appName": "Bicho Bom",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -11,14 +11,20 @@
         "google.com",
         "facebook.com"
       ],
-      "nativeAuth": false,
       "languageCode": "en",
+      "nativeAuth": false,
       "permissions": {
         "google": [
-          "profile",
-          "https://www.googleapis.com/auth/drive"
+          "profile"
+        ],
+        "facebook": [
+          "profile"
         ]
       }
     }
+  },
+  "server": {
+    "url": "http://192.168.0.24:8100",
+    "cleartext": true
   }
 }

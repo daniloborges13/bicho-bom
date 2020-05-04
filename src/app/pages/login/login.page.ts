@@ -32,16 +32,17 @@ export class LoginPage {
       await this.loginService.signInFacebook();
       this.router.navigate(['/inicio']);
     } catch (error) {
-      if (error.code == 'auth/invalid-email') {
+      console.error(error);
+      if (error.code === 'auth/invalid-email') {
         this.toast('O e-mail digitado não é valido.');
-      } else if (error.code == 'auth/user-disabled') {
+      } else if (error.code === 'auth/user-disabled') {
         this.toast('O usuário está desativado.');
-      } else if (error.code == 'auth/user-not-found') {
+      } else if (error.code === 'auth/user-not-found') {
         this.toast('O usuário não foi encontrado.');
-      } else if (error.code == 'auth/wrong-password') {
+      } else if (error.code === 'auth/wrong-password') {
         this.toast('A senha digitada não é valida.');
       } else {
-        this.toast('Você está off-line.');
+        this.toast('Não foi possível realizar login com o facebook');
       }
     }
   }

@@ -2,12 +2,11 @@ package com.bichobom;
 
 import android.os.Bundle;
 
+import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
 import com.getcapacitor.BridgeActivity;
 import com.getcapacitor.Plugin;
 
 import java.util.ArrayList;
-
-import com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth;
 
 public class MainActivity extends BridgeActivity {
   @Override
