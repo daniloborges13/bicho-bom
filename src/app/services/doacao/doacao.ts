@@ -12,6 +12,7 @@ export class DoacaoProvider {
     constructor(
         public afs: AngularFirestore,
         private toastCtrl: ToastController,
+        private loadingCtrl: LoadingController
     ) {
         this.doacaoCollection = afs.collection<Doacao>('doacoes', ref => {
             return ref;
@@ -22,12 +23,24 @@ export class DoacaoProvider {
         return this.doacaoCollection.add(doacao);
     }
 
-    dismissLoading() {
-        if (this.loading) {
-            this.loading.dismiss();
-            this.loading = null;
+    async showLoading(msg: string) {
+        if (!this.loading) {
+          this.loading = await this.loadingCtrl.create({
+            spinner: 'bubbles',
+            message: msg,
+            cssClass: 'custom-class custom-loading'
+          });
+          return await this.loading.present();
         }
-    }
+      }
+    
+      async dismissLoading() {
+        if (this.loading) {
+          await this.loading.dismiss();
+          this.loading = null;
+        }
+      }
+
     async toastMsg(msg: string) {
         const toast = await this.toastCtrl.create({
             message: msg,

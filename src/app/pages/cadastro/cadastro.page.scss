@@ -1,98 +1,102 @@
-
+ 
     ion-content{
-        --background: url("../../../assets/imgs/fundoLogin.jpg") 0 0/100% 100% no-repeat !important;
+        --background: url('./../../../assets/imgs/fundoLogin.jpg') 0 0/100% 100% no-repeat !important;
         background-position: center !important;
         background-size: cover !important;
         width: 100% !important;
-         height: 100% !important;
-        
+        height: 100% !important;
     }
     .filter{
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.6) !important; 
     }
-    ion-card{
-        box-shadow: none !important;
-        background: transparent !important;
-        margin-left: 100px;
-    }
-    ion-card-content img{
-        width: 130px;
-        height: auto;
-        margin: 0 auto;
-    }
-    .title{
-        text-align: center;
-        margin-top: -15px;
-        margin-bottom: 20px;
-        color: #FFFFFF !important;
-    }
-    ion-item{
-        margin-bottom: 5px !important;
-        border: none !important;
-    }
 
-    p{
-        padding: 15px;
-    }
+    ion-avatar{
+        width:100% !important;  
+        height : 100% !important;  
+        max-width: 100px !important;  //any size
+        max-height: 100px !important; //any size 
+      }
+      
+      .avatar{
+        margin: auto;
+      }
 
-    .item-inner, ion-item {
-        box-shadow: none !important;
-        border-bottom: 1px #ccc solid !important; 
-    }
-    
-
-    .logo{
-        padding: 30px 0;
-       
-    }
-    .list-md .item-block .item-inner{
-        border: none !important;
-    }
-    .list-ios .item-block .item-inner{
-        border: none !important;
-    }
-    .btn-clear{
-        font-size: medium !important;
-        color: #FFFFFF;
-        margin-left: 65px;
-        background-color: transparent !important;
-        padding: 30px;
+        ion-card{
+            box-shadow: none !important;
+            background: transparent !important;
+            margin-left: 100px;
+        }
         
-    }
-    .txt-login{
-        text-align: center;
-        font-size: smaller;
-    }
-    .text-danger{
-        color: #FFBA08;
-        font-size: small;
-        background: transparent;
-        margin-top: -10px ;
-    }
-    .text-input-md{
-        margin: 0 !important;
-    }
+        ion-card-content img{
+            width: 130px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .title{
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 20px;
+            color: #FFFFFF !important;
+        }
+        ion-item{
+            margin-bottom: 5px !important;
+            border: none !important;
+        }
 
-    .txtTransparent{
-        background-color: transparent;
-    }
+        p{
+            padding: 15px;
+        }
 
-    .corIcone{
-        color: #ffffff;
-    }
+        .item-inner, ion-item {
+            box-shadow: none !important;
+            border-bottom: 1px #ccc solid !important; 
+        }
+    
+        .logo{
+            padding: 30px 0;
+        }
+        .list-md .item-block .item-inner{
+            border: none !important;
+        }
+        .list-ios .item-block .item-inner{
+            border: none !important;
+        }
+        .btn-clear{
+            font-size: small !important;
+            color: #FFFFFF;
+        }
+        .txt-login{
+            text-align: center;
+            font-size: smaller;
+            color: #FFBA08;
+        }
+        .text-danger{
+            color: #FFBA08;
+            font-size: small;
+            background: transparent;
+            margin-top: -10px ;
+        }
+        .text-input-md{
+            margin: 0 !important;
+        }
 
-    .placeholderEmail{
-        color: #FFFFFF;
-    }
+        .txtTransparent{
+            background-color: transparent;
+        }
 
-    .bg-transparent {
-        background-color: transparent !important;
-    }
+        .corIcone{
+            color: #FFFFFF;
+        }
 
-    .btnCriarConta{
-        color: --ion-color-primary;
-        margin-left: 45px;
-        margin-right: 45px;
-    }
+        .placeholderEmail{
+            color: #FFFFFF;
+        }
+
+        .bg-transparent{
+            background-color: transparent !important;
+        }
+
+
+    

@@ -42,13 +42,12 @@
     </ion-row>
   </ion-grid>
 
- 
-  <ion-button expand="block" shape="round" color="primary">
-    Upload
-    <ion-icon  slot="end"  name="cloud-upload-sharp"></ion-icon>
-  </ion-button>
+  <input type="file" (change)="uploadFile($event)">
 
-  <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+  <img class="imgDoacao" [src]="this.formPerdidos.get('urlFoto').value">
+
+
+  <br> 
 
   <ion-button [disabled]="!formPerdidos.valid" type="submit" expand="block" shape="round" color="primary">
     Cadastrar animal perdido

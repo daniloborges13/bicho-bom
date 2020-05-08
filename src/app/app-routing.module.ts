@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'registrarperdidos',
     loadChildren: () => import('./pages/registrarperdidos/registrarperdidos.module').then( m => m.RegistrarperdidosPageModule)
-  },  {
+  },
+  {
     path: 'adote',
     loadChildren: () => import('./pages/adote/adote.module').then( m => m.AdotePageModule)
   },
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'procurarperdidos',
+    loadChildren: () => import('./pages/procurarperdidos/procurarperdidos.module').then( m => m.ProcurarperdidosPageModule)
   },
 
 

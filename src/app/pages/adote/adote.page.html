@@ -3,29 +3,41 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Adote um amigo</ion-title>
+    <ion-title>Adote um amigo </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
-  <ion-card>
-    <div class="fotosPets">   
-       <img src="../../../assets/imgs/thor.jpg" />
+<ion-content class="ion-padding" class="ion-text-center">
+
+  <ion-card *ngFor="let bicho of bichos | async">
+    <br>
+    <div class="fotosPets">
+      <img [src]="bicho.urlFoto" />
     </div>
 
     <ion-card-header>
-      <ion-card-subtitle>06/03/2020</ion-card-subtitle>
-      <ion-card-title>Thor</ion-card-title>
+      <ion-card-subtitle>Publicado em: {{bicho.dataDoacao.toDate() | date : 'dd/MM/yyyy'}}</ion-card-subtitle>
+      <ion-card-title>Nome: {{bicho.nomePet}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Raça: Border collie</p>
-      <p>Sexo: Macho</p>
-      <p>Tipo do pet: Cachorro</p>
-      <p>Telefone p/ contato: (14)9 99682-6968</p>
-      <ion-button type="submit" expand="block" shape="round" color="primary">
-        Enviar mensagem
-        <ion-icon slot="end" name="chatbubbles-sharp"></ion-icon>
-      </ion-button>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <b>Sexo: {{bicho.sexo}}</b>
+            <br>
+            <b>Raça: {{bicho.raca}}</b>
+            <br>
+            <b>Tipo: {{bicho.tipoPet}}</b>
+            <br>
+            <b>WhatsApp: <a> {{bicho.celular}} </a> </b>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     </ion-card-content>
+
+   
+
   </ion-card>
 </ion-content>

@@ -1,21 +1,21 @@
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-adote',
-  templateUrl: './adote.page.html',
-  styleUrls: ['./adote.page.scss'],
+  selector: 'app-procurarperdidos',
+  templateUrl: './procurarperdidos.page.html',
+  styleUrls: ['./procurarperdidos.page.scss'],
 })
-export class AdotePage implements OnInit {
+export class ProcurarperdidosPage implements OnInit {
 
-bichos: any;
+  perdidos: any;
 
   constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
-   this.bichos = this.afs.collection<any>('doacoes', ref => {
-      return ref.where('adotado', '==', false)
+   this.perdidos = this.afs.collection<any>('perdidos', ref => {
+      return ref.where('perdido', '==', true)
     })
     .snapshotChanges()
     .pipe(map(actions => {

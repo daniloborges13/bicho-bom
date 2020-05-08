@@ -6,7 +6,7 @@
     <ion-title>Registrar Doação</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content fullscreen class="ion-padding">
+<ion-content class="ion-padding" class="ion-text-center">
 
   <form [formGroup]="formDoacao" novalidate (submit)="salvarDoacao()"> 
 
@@ -20,11 +20,11 @@
   </ion-item>
 
   <ion-item class="txtTransparent" > 
-    <ion-input formControlName="celular" type="text" class="placeholderEmail" placeholder="Celular p/ contato com DDD" [brmasker]="{phone: true}"  name="email" required></ion-input>
+    <ion-input formControlName="celular" type="text" class="placeholderEmail" placeholder="Celular p/ contato com DDD" [brmasker]="{phone: true}"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Pet</ion-label>
+    <ion-label>Sexo</ion-label>
     <ion-select formControlName="sexo">
       <ion-select-option value="macho">Macho</ion-select-option>
       <ion-select-option value="femea">Fêmea</ion-select-option>
@@ -37,7 +37,7 @@
 
 
   <ion-grid>
-    <ion-radio-group formControlName="tipoPet" value="grape">
+    <ion-radio-group formControlName="tipoPet">
       <ion-row>
         <ion-col col-6> 
           <ion-item>
@@ -69,13 +69,15 @@
     </ion-row>
   </ion-grid>
 
- 
-  <ion-button expand="block" shape="round" color="primary" (click)="openGalery()">
+  <input type="file" (change)="uploadFile($event)">
+
+ <img class="imgDoacao" [src]="this.formDoacao.get('urlFoto').value">
+
+  <!-- <ion-button expand="block" shape="round" color="primary" (click)="openGalery()">
     Upload
     <ion-icon  slot="end"  name="cloud-upload-sharp"></ion-icon>
-  </ion-button>
+  </ion-button> -->
 
-  <br> <br> <br> <br> 
 
   <ion-button [disabled]="!formDoacao.valid" type="submit" expand="block" shape="round" color="primary">
     Cadastrar animal para doação

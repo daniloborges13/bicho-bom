@@ -1,10 +1,14 @@
-<ion-content padding>
-  <div padding>
-    <ion-card>
-      <ion-card-content>
-        <img class="logo" src="./../../assets/imgs/logo-2.png">
-      </ion-card-content>
-    </ion-card>
+<ion-content class="ion-padding" class="ion-text-center">
+  <div class="ion-padding">
+    <br> <br>
+
+    <ion-avatar class="avatar">
+      <img src="./../../../assets/icon/logoofc.jpg">
+    </ion-avatar>
+
+    <div class="ion-text-center">
+      <h2 style="color: white;">BICHO BOM</h2>
+    </div>
 
     <form [formGroup]="form" (ngSubmit)="resetPassword()" >
       <ion-list class="bg-transparent">
@@ -20,7 +24,7 @@
 
       </ion-list>
 
-      <ion-button ion-button expand="block" shape="round" color="primary" [disabled]="!form.valid">
+      <ion-button ion-button expand="block" shape="round" color="secondary" [disabled]="!form.valid">
         Enviar Link
       </ion-button>
       <p class="txt-login">Verifique seu E-mail e siga as instruções!<br><br>Caso não receba na Caixa de Entrada

@@ -1,10 +1,14 @@
-<ion-content padding>
-  <div padding>
-    <ion-card>
-      <ion-card-content>
-        <img class="logo" src="../../assets/imgs/logo-2.png">
-      </ion-card-content>
-    </ion-card>
+<ion-content class="ion-padding" class="ion-text-center">
+  <div class="ion-padding">
+    <br> <br>
+
+    <ion-avatar class="avatar">
+      <img src="./../../../assets/icon/logoofc.jpg">
+    </ion-avatar>
+
+    <div class="ion-text-center">
+      <h2 style="color: white;">BICHO BOM</h2>
+    </div>
 
     <form #form="ngForm" novalidate>
       <ion-list class="bg-transparent">
@@ -59,14 +63,14 @@
 
       </ion-list>
 
-      <ion-button class="btnCriarConta" ion-button expand="block" shape="round" [disabled]="!form.form.valid" (click)="createAccount()">Criar Conta</ion-button>
+      <ion-button class="btnCriarConta" color="secondary" ion-button expand="block" shape="round" [disabled]="!form.form.valid" (click)="createAccount()">Criar Conta</ion-button>
        
 
     </form>
 
     <ion-row>
       <ion-col>
-        <button  [routerLink]="['/login']" ion-button expand="block" shape="clear" class="btn-clear">JÁ TEM UMA CONTA?</button>
+        <ion-button [routerLink]="['/login']" ion-button expand="block" shape="clear"  class="btn-clear" >Já tem uma conta?</ion-button>
       </ion-col>
     </ion-row>
   </div>
