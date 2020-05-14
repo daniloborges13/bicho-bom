@@ -1,0 +1,7 @@
+{
+  "name": "bicho-bom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
