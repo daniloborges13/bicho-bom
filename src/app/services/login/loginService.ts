@@ -4,14 +4,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Observable } from 'rxjs/internal/Observable';
 
-import { User as FirebaseUser } from 'firebase/app';
-import { cfaSignIn } from 'capacitor-firebase-auth';
-
-import { Capacitor } from '@capacitor/core';
-
-const { platform } = Capacitor;
-const { FacebookAuthProvider } = auth;
-
 @Injectable()
 export class LoginService {
 
@@ -24,11 +16,11 @@ export class LoginService {
   }
 
   createUser(user: User) {
-    return this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+    return this.angularFireAuth.createUserWithEmailAndPassword(user.email, user.password);
   }
 
   signIn(user: User) {
-    return this.angularFireAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+    return this.angularFireAuth.signInWithEmailAndPassword(user.email, user.password);
   }
 
   async signOut(): Promise<any> {
@@ -40,7 +32,7 @@ export class LoginService {
   }
 
   public signOutFirebase() {
-    return this.angularFireAuth.auth.signOut();
+    return this.angularFireAuth.signOut();
   }
 
 
