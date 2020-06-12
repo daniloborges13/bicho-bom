@@ -37,7 +37,7 @@ export class LoginService {
 
 
   resetPassword(email: string) {
-    return auth().sendPasswordResetEmail(email)
+    return this.angularFireAuth.sendPasswordResetEmail(email)
       .then(() => console.log('email sent'))
       .catch((error) => console.log(error));
   }

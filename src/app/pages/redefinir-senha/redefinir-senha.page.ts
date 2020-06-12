@@ -27,30 +27,41 @@ export class RedefinirSenhaPage implements OnInit {
   }
 
   async resetPassword() {
+    console.log(this.form);
     if (this.form.valid) {
-      const toast = await this.toastCtrl.create({
-        message: 'Sua solicitação foi enviada ao seu email',
-        duration: 3000,
-        position: 'bottom',
-      });
-      this.loginService
-        .resetPassword(this.form.get('email').value)
-        .then(() => {
-          this.router.navigate['/login'];
-        })
-        .catch((error: any) => {
-          if (error.code === 'auth/invalid-email') {
-            alert('O e-mail digitado não é valido.');
-          } else if (error.code === 'auth/user-not-found') {
-            alert('O usuário não foi encontrado.');
-          }
-
-          toast.present();
+      try {
+        await this.loginService.resetPassword(this.form.get('email').value);
+        const toast = await this.toastCtrl.create({
+          message: 'Sua solicitação foi enviada ao seu email',
+          duration: 3000,
+          position: 'bottom',
         });
+
+        toast.present();
+        this.router.navigate(['/login']);
+      } catch (error) {
+
+        console.error(error);
+
+        let message = 'Houve um problema ao processar seu pedido';
+        if (error.code === 'auth/invalid-email') {
+          message = 'O e-mail digitado não é valido.';
+        } else if (error.code === 'auth/user-not-found') {
+          message = 'O usuário não foi encontrado.';
+        }
+
+        const toast = await this.toastCtrl.create({
+          message,
+          duration: 3000,
+          position: 'bottom',
+        });
+
+        toast.present();
+      }
     }
   }
 
   login() {
-    this.router.navigate['/login'];
+    this.router.navigate(['/login']);
   }
 }
