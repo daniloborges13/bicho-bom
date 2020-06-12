@@ -3,41 +3,46 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Adote um amigo </ion-title>
+    <ion-title>Adote um Amigo </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" class="ion-text-center">
 
-  <ion-card *ngFor="let bicho of bichos | async">
-    <br>
-    <div class="fotosPets">
-      <img [src]="bicho.urlFoto" />
-    </div>
+  <ion-searchbar [(ngModel)]="buscarCidade" placeholder="Buscar por cidade...">
+  </ion-searchbar>
 
-    <ion-card-header>
-      <ion-card-subtitle>Publicado em: {{bicho.dataDoacao.toDate() | date : 'dd/MM/yyyy'}}</ion-card-subtitle>
-      <ion-card-title>Nome: {{bicho.nomePet}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
+  <div>
+    <ion-card *ngFor="let bicho of bichos | async | filtro: buscarCidade ">
+      <br>
+      <div class="fotosPets">
+        <img [src]="bicho.urlFoto" />
+      </div>
 
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <b>Sexo: {{bicho.sexo}}</b>
-            <br>
-            <b>Raça: {{bicho.raca}}</b>
-            <br>
-            <b>Tipo: {{bicho.tipoPet}}</b>
-            <br>
-            <b>WhatsApp: <a> {{bicho.celular}} </a> </b>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-card-header>
+        <ion-card-title>Nome: {{bicho.nomePet}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
 
-    </ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <b>Sexo: {{bicho.sexo}}</b>
+              <br>
+              <b>Tipo: {{bicho.tipoPet}}</b>
+              <br>
+              <b>Estado: {{bicho.estado}}</b>
+              <br>
+              <b>Cidade: {{bicho.cidade}}</b>
+              <br>          
+              <b>Observações: {{bicho.obs}}</b>
+              <br>
+              <b>WhatsApp: <a> {{bicho.celular}} </a> </b>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-   
-
-  </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

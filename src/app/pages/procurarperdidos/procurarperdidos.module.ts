@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ProcurarperdidosPageRoutingModule } from './procurarperdidos-routing.module';
 
 import { ProcurarperdidosPage } from './procurarperdidos.page';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProcurarperdidosPageRoutingModule
+    ProcurarperdidosPageRoutingModule,
+    PipesModule
   ],
   declarations: [ProcurarperdidosPage]
 })

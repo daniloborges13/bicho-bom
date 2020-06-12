@@ -31,15 +31,6 @@ export class LoginService {
     return this.angularFireAuth.auth.signInWithEmailAndPassword(user.email, user.password);
   }
 
-  async signInFacebook() {
-    if (platform === 'web') {
-      return await this.angularFireAuth.auth.signInWithPopup(new FacebookAuthProvider());
-    } else {
-      const provider = new FacebookAuthProvider();
-      return await cfaSignIn(provider.providerId).toPromise<FirebaseUser>();
-    }
-  }
-
   async signOut(): Promise<any> {
     try {
       return this.signOutFirebase();

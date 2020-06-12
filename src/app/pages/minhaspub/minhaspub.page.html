@@ -1,0 +1,31 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Minhas Doações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-list >
+    <div class="ion-text-center" *ngIf="(bichos | async)?.length==0;">
+      <b>Nenhuma publicação realizada</b>
+    </div>
+
+    <div *ngIf="(bichos | async)?.length > 0;">
+      <ion-item color="light" *ngFor="let bicho of bichos | async ">
+        <ion-avatar slot="start">
+          <img [src]="bicho.urlFoto">
+        </ion-avatar>
+        <ion-label> {{bicho.nomePet}} </ion-label>
+
+        <ion-button (click)="removerPub(bicho.id)">
+          <ion-icon slot="end" name="trash-sharp"></ion-icon>
+          Remover
+        </ion-button>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

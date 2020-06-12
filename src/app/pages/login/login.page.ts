@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import { LoginService } from 'src/app/services/login/loginService';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -21,36 +22,25 @@ export class LoginPage {
     public loadCtrl: LoadingController,
     public toastCtrl: ToastController,
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
+    private storage: Storage
   ) { }
 
-  async facebookLogin() {
-    try {
-      await this.loginService.signInFacebook();
-      this.router.navigate(['/inicio']);
-    } catch (error) {
-      console.error(error);
-      if (error.code === 'auth/invalid-email') {
-        this.toast('O e-mail digitado não é valido.');
-      } else if (error.code === 'auth/user-disabled') {
-        this.toast('O usuário está desativado.');
-      } else if (error.code === 'auth/user-not-found') {
-        this.toast('O usuário não foi encontrado.');
-      } else if (error.code === 'auth/wrong-password') {
-        this.toast('A senha digitada não é valida.');
-      } else {
-        this.toast('Não foi possível realizar login com o facebook');
-      }
-    }
-  }
+
 
   async signIn() {
     await this.showLoading();
     if (this.form.form.valid) {
       this.loginService.signIn(this.user)
         .then((data) => {
-          this.router.navigate(['/inicio']);
-          this.dismissLoading();
+          this.storage.set('USER_INFO', JSON.stringify(data.user))
+            .then((res) => {
+              this.router.navigate(['inicio']);
+              this.dismissLoading();
+            })
+            .catch((err) => {
+              this.dismissLoading();
+            });
         })
         .catch((error: any) => {
           this.dismissLoading();

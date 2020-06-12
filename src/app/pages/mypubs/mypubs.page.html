@@ -1,0 +1,34 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Publicações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-padding" class="ion-text-center">
+  <ion-grid >
+    <ion-row>
+      <ion-col size="6">
+        <div class=figure [routerLink]="['/minhaspub']" >
+          <p>
+            <img src="../../../assets/icon/myadocoes.png" alt="" srcset="">
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <div class=figure [routerLink]="['/myanimalperdido']">
+          <p>
+            <img src="../../../assets/icon/myperdidos.png" alt="" srcset="">
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>

@@ -6,17 +6,12 @@
     <ion-title>Registrar Doação</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding" class="ion-text-center">
+<ion-content class="ion-padding" class="ion-text-center" fullscreen >
 
   <form [formGroup]="formDoacao" novalidate (submit)="salvarDoacao()"> 
 
   <ion-item class="txtTransparent"  > 
     <ion-input formControlName="nomePet" class="placeholderEmail" type="text" placeholder="Nome do pet" name="email" required></ion-input>
-  </ion-item>
-
-
-  <ion-item class="txtTransparent" > 
-    <ion-input formControlName="raca" class="placeholderEmail" type="text" placeholder="Raça" name="email" required></ion-input>
   </ion-item>
 
   <ion-item class="txtTransparent" > 
@@ -26,15 +21,50 @@
   <ion-item>
     <ion-label>Sexo</ion-label>
     <ion-select formControlName="sexo">
-      <ion-select-option value="macho">Macho</ion-select-option>
-      <ion-select-option value="femea">Fêmea</ion-select-option>
+      <ion-select-option value="Macho">Macho</ion-select-option>
+      <ion-select-option value="Fêmea">Fêmea</ion-select-option>
     </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select formControlName="estado">
+      <ion-select-option value="Acre">Acre</ion-select-option>
+      <ion-select-option value="Alagoas">Alagoas</ion-select-option>
+      <ion-select-option value="Amapá">Amapá</ion-select-option>
+      <ion-select-option value="Amazonas">Amazonas</ion-select-option>
+      <ion-select-option value="Bahia">Bahia</ion-select-option>
+      <ion-select-option value="Ceará">Ceará</ion-select-option>
+      <ion-select-option value="Espírito Santo">Espírito Santo</ion-select-option>
+      <ion-select-option value="Goiás">Goiás</ion-select-option>
+      <ion-select-option value="Maranhão">Maranhão</ion-select-option>
+      <ion-select-option value="Mato Grosso">Mato Grosso</ion-select-option>
+      <ion-select-option value="Mato Grosso do Sul">Mato Grosso do Sul</ion-select-option>
+      <ion-select-option value="Minas Gerais">Minas Gerais</ion-select-option>
+      <ion-select-option value="Pará">Pará</ion-select-option>
+      <ion-select-option value="Paraíba">Paraíba</ion-select-option>
+      <ion-select-option value="Paraná">Paraná</ion-select-option>
+      <ion-select-option value="Pernambuco">Pernambuco</ion-select-option>
+      <ion-select-option value="Piauí">Piauí</ion-select-option>
+      <ion-select-option value="Rio de Janeiro">Rio de Janeiro</ion-select-option>
+      <ion-select-option value="Rio Grande do Norte">Rio Grande do Norte</ion-select-option>
+      <ion-select-option value="Rio Grande do Sul">Rio Grande do Sul </ion-select-option>
+      <ion-select-option value="Rondônia">Rondônia</ion-select-option>
+      <ion-select-option value="Roraima">Roraima</ion-select-option>
+      <ion-select-option value="Santa Catarina">Santa Catarina</ion-select-option>
+      <ion-select-option value="São Paulo">São Paulo</ion-select-option>
+      <ion-select-option value="Sergipe">Sergipe</ion-select-option>
+      <ion-select-option value="Tocantins">Tocantins</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class="txtTransparent"> 
+    <ion-input formControlName="cidade" class="placeholderEmail" type="text" placeholder="Cidade" name="email" required></ion-input>
   </ion-item>
 
   <ion-item class="txtTransparent"> 
     <ion-textarea formControlName="obs" class="placeholderEmail" placeholder="Observações..."></ion-textarea>
   </ion-item>
-
 
   <ion-grid>
     <ion-radio-group formControlName="tipoPet">
@@ -42,19 +72,20 @@
         <ion-col col-6> 
           <ion-item>
             <img src="../../../assets/icon/cachorro.png">
-            <ion-radio slot="start" color="primary" value="cachorro"></ion-radio>
+            <ion-radio slot="start" color="primary" value="Cachorro"></ion-radio>
           </ion-item>
         </ion-col>
 
         <ion-col col-6> 
           <ion-item >
             <img src="../../../assets/icon/gato.png">
-            <ion-radio slot="start" color="primary" value="gato"></ion-radio>
+            <ion-radio slot="start" color="primary" value="Gato"></ion-radio>
           </ion-item>
       </ion-col>
     </ion-row>
     </ion-radio-group>
   </ion-grid>
+
 
   <ion-grid>
     <ion-row>

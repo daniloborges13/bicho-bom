@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { Perdidos } from 'src/app/components/models/perdidos';
 
 @Component({
   selector: 'app-procurarperdidos',
@@ -10,6 +11,8 @@ import { map } from 'rxjs/operators';
 export class ProcurarperdidosPage implements OnInit {
 
   perdidos: any;
+  buscarCidade: string;
+  perdido: Perdidos[];
 
   constructor(private afs: AngularFirestore) { }
 

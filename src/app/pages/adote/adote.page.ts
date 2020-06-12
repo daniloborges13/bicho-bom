@@ -1,3 +1,4 @@
+import { Doacao } from './../../components/models/doacao';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
@@ -9,7 +10,10 @@ import { map } from 'rxjs/operators';
 })
 export class AdotePage implements OnInit {
 
-bichos: any;
+  bichos: any;
+  doacao: Doacao[];
+  buscarCidade: string;
+
 
   constructor(private afs: AngularFirestore) { }
 

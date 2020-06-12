@@ -1,3 +1,5 @@
+import { LoginService } from './../../services/login/loginService';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilPage implements OnInit {
 
-  constructor() { }
+  dadosUser: any = [];
+
+  constructor(private user: LoginService) {
+    
+  }
 
   ngOnInit() {
   }

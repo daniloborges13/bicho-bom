@@ -12,15 +12,6 @@
 
     <form #form="ngForm" novalidate>
       <ion-list class="bg-transparent">
-        <!-- NOME -->
-        <ion-item class="txtTransparent" lines="none" color="none"> 
-            <ion-label>
-              <ion-icon class="corIcone" name="person"></ion-icon>
-            </ion-label>
-            <ion-input class="placeholderEmail" type="text" placeholder="Nome" name="nome" [(ngModel)]="user.nome" #nome="ngModel" required>
-            </ion-input>
-          </ion-item>
-          <!-- FIM DO NOME -->
           <p *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
             O campo Nome é obrigatório
           </p>

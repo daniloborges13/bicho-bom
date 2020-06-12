@@ -1,96 +1,74 @@
+<ion-menu class="toolbar" color="primary" side="start" content-id="main-content">
+  <ion-header color="primary">
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="['/mypubs']">
+        <ion-icon name="archive-sharp" slot="start"></ion-icon>
+        <ion-label>Minhas Publicações</ion-label>
+      </ion-item>
 
-    <ion-menu class="toolbar"  color="primary" side="start" content-id="main-content">
-      <ion-header translucent > 
-        <ion-toolbar color="primary">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content> 
-        <ion-list>
-          <ion-item [routerLink]="['/perfil']">
-            <ion-icon name="person-sharp" slot="start"></ion-icon>
-            <ion-label>Perfil</ion-label>
-          </ion-item>
+      <ion-item [routerLink]="['/sobre']">
+        <ion-icon name="alert-circle-sharp" slot="start"></ion-icon>
+        <ion-label>Sobre</ion-label>
+      </ion-item>
 
-          <ion-item [routerLink]="['/sobre']">
-            <ion-icon name="alert-circle-sharp" slot="start"></ion-icon>
-            <ion-label>Sobre</ion-label>
-          </ion-item>
+      <ion-item (click)="logout()">
+        <ion-icon name="exit-sharp" slot="start"></ion-icon>
+        <ion-label>Sair</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-          <ion-item>
-            <ion-icon name="exit-sharp" slot="start"></ion-icon>
-            <ion-label>Sair</ion-label>
-          </ion-item>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-         
-        </ion-list>
+<ion-content class="ion-page" id="main-content">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <div class=figure [routerLink]="['/adote']">
+          <p>
+            <img src="../../../assets/icon/adocao.png" alt="" srcset="">
+          </p>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class=figure [routerLink]="['/doacao']">
+          <p>
+            <img src="../../../assets/icon/registrardoacao.png" alt="" srcset="">
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
 
-       
-      </ion-content>
-    </ion-menu>
+    <ion-row>
+      <ion-col size="6">
+        <div class=figure [routerLink]="['/procurarperdidos']">
+          <p>
+            <img src="../../../assets/icon/procurado.png" alt="" srcset="">
+          </p>
+        </div>
+      </ion-col>
 
-    <div class="ion-page" id="main-content">
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">
-            <div class=figure [routerLink]="['/adote']">
-              <p>
-                <img src="../../../assets/icon/adocao.png" alt="" srcset="">
-              </p>
-            </div>
-          </ion-col>
-          <ion-col size="6">
-            <div class=figure [routerLink]="['/doacao']">
-              <p>
-                <img src="../../../assets/icon/registrardoacao.png" alt="" srcset="">
-              </p>
-            </div>
-          </ion-col>
-        </ion-row>
-
-
-
-
-        
-        <ion-row>
-          <ion-col size="6">
-            <div class=figure [routerLink]="['/procurarperdidos']"> 
-              <p>
-                <img src="../../../assets/icon/procurado.png" alt="" srcset="">
-              </p>
-            </div>
-          </ion-col>
-
-          <ion-col size="6" [routerLink]="['/registrarperdidos']">
-            <div class=figure>
-              <p>
-                <img src="../../../assets/icon/perdidos.png" alt="" srcset="">
-              </p>
-            </div>
-          </ion-col>
-        </ion-row>
-      
-       
-      </ion-grid>
-
-
-    </div>
-
- 
-
-
-
-
-
-
-
+      <ion-col size="6" [routerLink]="['/registrarperdidos']">
+        <div class=figure>
+          <p>
+            <img src="../../../assets/icon/perdidos.png" alt="" srcset="">
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

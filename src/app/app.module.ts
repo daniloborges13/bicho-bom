@@ -1,3 +1,4 @@
+import { PipesModule } from './pipes/pipes.module';
 import { DoacaoProvider } from './services/doacao/doacao';
 import { RegistrarperdidosPageModule } from './pages/registrarperdidos/registrarperdidos.module';
 import { DoacaoPageModule } from './pages/doacao/doacao.module';
@@ -48,7 +49,11 @@ import { PerdidosProvider } from './services/perdidos/perdidos';
      RedefinirSenhaPageModule,
      DoacaoPageModule,
      RegistrarperdidosPageModule,
-     IonicStorageModule.forRoot(),
+     PipesModule,
+     IonicStorageModule.forRoot({
+      name: '__bichobom',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
      AngularFireStorageModule,
      AngularFireDatabaseModule,
      AngularFirestoreModule.enablePersistence()

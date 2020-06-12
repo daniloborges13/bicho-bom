@@ -1,0 +1,33 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meus Animais Perdidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content class="ion-padding">
+    <ion-list >
+      <div class="ion-text-center" *ngIf="(perdidos | async)?.length==0;">
+        <b>Nenhuma publicação realizada</b>
+      </div>
+  
+      <div *ngIf="(perdidos | async)?.length > 0;">
+        <ion-item color="light" *ngFor="let perdido of perdidos | async ">
+          <ion-avatar slot="start">
+            <img [src]="perdido.urlFoto">
+          </ion-avatar>
+          <ion-label> {{perdido.nomePet}} </ion-label>
+  
+          <ion-button (click)="removerPub(perdido.id)">
+            <ion-icon slot="end" name="trash-sharp"></ion-icon>
+            Remover
+          </ion-button>
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+
+</ion-content>

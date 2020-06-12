@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen class="ion-padding">
+<ion-content fullscreen class="ion-padding" class="ion-text-center">
   <form [formGroup]="formPerdidos" novalidate (submit)="salvarPerdidos()"> 
 
   
@@ -15,9 +15,42 @@
     <ion-input formControlName="nomePet"  class="placeholderEmail" type="text" placeholder="Nome do animal" name="email" required></ion-input>
   </ion-item>
 
-  <ion-item class="txtTransparent"> 
-    <ion-input formControlName="proprietario" class="placeholderEmail" type="text" placeholder="Proprietário" name="email" required></ion-input>
+  <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select formControlName="estado">
+      <ion-select-option value="Acre">Acre</ion-select-option>
+      <ion-select-option value="Alagoas">Alagoas</ion-select-option>
+      <ion-select-option value="Amapá">Amapá</ion-select-option>
+      <ion-select-option value="Amazonas">Amazonas</ion-select-option>
+      <ion-select-option value="Bahia">Bahia</ion-select-option>
+      <ion-select-option value="Ceará">Ceará</ion-select-option>
+      <ion-select-option value="Espírito Santo">Espírito Santo</ion-select-option>
+      <ion-select-option value="Goiás">Goiás</ion-select-option>
+      <ion-select-option value="Maranhão">Maranhão</ion-select-option>
+      <ion-select-option value="Mato Grosso">Mato Grosso</ion-select-option>
+      <ion-select-option value="Mato Grosso do Sul">Mato Grosso do Sul</ion-select-option>
+      <ion-select-option value="Minas Gerais">Minas Gerais</ion-select-option>
+      <ion-select-option value="Pará">Pará</ion-select-option>
+      <ion-select-option value="Paraíba">Paraíba</ion-select-option>
+      <ion-select-option value="Paraná">Paraná</ion-select-option>
+      <ion-select-option value="Pernambuco">Pernambuco</ion-select-option>
+      <ion-select-option value="Piauí">Piauí</ion-select-option>
+      <ion-select-option value="Rio de Janeiro">Rio de Janeiro</ion-select-option>
+      <ion-select-option value="Rio Grande do Norte">Rio Grande do Norte</ion-select-option>
+      <ion-select-option value="Rio Grande do Sul">Rio Grande do Sul </ion-select-option>
+      <ion-select-option value="Rondônia">Rondônia</ion-select-option>
+      <ion-select-option value="Roraima">Roraima</ion-select-option>
+      <ion-select-option value="Santa Catarina">Santa Catarina</ion-select-option>
+      <ion-select-option value="São Paulo">São Paulo</ion-select-option>
+      <ion-select-option value="Sergipe">Sergipe</ion-select-option>
+      <ion-select-option value="Tocantins">Tocantins</ion-select-option>
+    </ion-select>
   </ion-item>
+
+  <ion-item class="txtTransparent"> 
+    <ion-input formControlName="cidade" class="placeholderEmail" type="text" placeholder="Cidade" name="email" required></ion-input>
+  </ion-item>
+
 
   <ion-item class="txtTransparent" > 
     <ion-input formControlName="celular" class="placeholderEmail" placeholder="Celular p/ contato com DDD" type="text" [brmasker]="{phone: true}"  name="email" required></ion-input>
@@ -25,7 +58,6 @@
 
   <ion-item class="txtTransparent"> 
     <ion-textarea formControlName="obs" class="placeholderEmail" placeholder="Observações..."></ion-textarea>
-    
   </ion-item>
 
 

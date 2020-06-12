@@ -3,20 +3,22 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Registrar Animais Perdidos</ion-title>
+    <ion-title>Procurar Animais Perdidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" class="ion-text-center">
 
-  <ion-card *ngFor="let perdido of perdidos | async">
+  <ion-searchbar [(ngModel)]="buscarCidade" placeholder="Buscar por cidade...">
+  </ion-searchbar>
+
+  <ion-card *ngFor="let perdido of perdidos | async | filtroPerdido: buscarCidade">
     <br>
     <div class="fotosPets">
       <img [src]="perdido.urlFoto" />
     </div>
 
     <ion-card-header>
-      <ion-card-subtitle>Publicado em: {{perdido.dataPerdido.toDate() | date : 'dd/MM/yyyy'}}</ion-card-subtitle>
       <ion-card-title>Nome: {{perdido.nomePet}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -24,11 +26,13 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <b>Proprietario: {{perdido.proprietario}}</b> 
+            <b>Estado: {{perdido.estado}} </b>
             <br>
-            <b>WhatsApp: <a href="https://wa.me/?text=I'm%20inquiring%20about%20the%20apartment%20listing`" > {{perdido.celular}} </a> </b>
+            <b>Cidade: {{perdido.cidade}} </b>
             <br>
             <b>Observações: {{perdido.obs}} </b>
+            <br>
+            <b>WhatsApp: <a href="https://wa.me/?text=I'm%20inquiring%20about%20the%20apartment%20listing`" > {{perdido.celular}} </a> </b>
           </ion-col>
         </ion-row>
       </ion-grid>
