@@ -10,40 +10,36 @@ import { NgForm } from '@angular/forms';
   templateUrl: './cadastro.page.html',
   styleUrls: ['./cadastro.page.scss'],
 })
-export class CadastroPage  {
-
-  user: User = new User();  
-  @ViewChild('form', {static: true}) form: NgForm;
+export class CadastroPage {
+  user: User = new User();
+  @ViewChild('form', { static: true }) form: NgForm;
 
   constructor(
     public navCtrl: NavController,
     private toastCtrl: ToastController,
     private loginService: LoginService,
     private router: Router
-  ) { }
+  ) {}
 
   createAccount() {
-    if (this.user.password != this.user.rePassword){
-
-      this.form.form.invalid;
+    if (this.user.password !== this.user.rePassword && this.form.form.invalid) {
       this.toast('Os campos Senha não correspondem!');
-
     } else if (this.form.form.valid) {
-
-      this.loginService.createUser(this.user)
-        .then((user: any) => {
-          user.sendEmailVerification();
+      this.loginService
+        .createUser(this.user)
+        .then((credential) => {
+          credential.user.sendEmailVerification();
           this.toast('Usuário criado com sucesso.');
           this.router.navigate['/home'];
         })
         .catch((error: any) => {
-          if (error.code  == 'auth/email-already-in-use') {
+          if (error.code === 'auth/email-already-in-use') {
             this.toast('O e-mail digitado já está em uso.');
-          } else if (error.code  == 'auth/invalid-email') {
+          } else if (error.code === 'auth/invalid-email') {
             this.toast('O e-mail digitado não é valido.');
-          } else if (error.code  == 'auth/operation-not-allowed') {
+          } else if (error.code === 'auth/operation-not-allowed') {
             this.toast('Usuário não autorizado a criar contas.');
-          } else if (error.code  == 'auth/weak-password') {
+          } else if (error.code === 'auth/weak-password') {
             this.toast('A senha digitada é muito fraca.');
           }
         });
@@ -51,10 +47,10 @@ export class CadastroPage  {
   }
 
   async toast(msg: string) {
-    let toast = await this.toastCtrl.create({
+    const toast = await this.toastCtrl.create({
       message: msg,
       duration: 1500,
-      position: 'bottom'
+      position: 'bottom',
     });
     toast.present();
   }
@@ -62,5 +58,4 @@ export class CadastroPage  {
   login() {
     this.router.navigate['/login'];
   }
-
 }
