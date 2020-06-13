@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">Bicho Bom</string>
     <string name="title_activity_main">Bicho Bom</string>
-    <string name="package_name">com.bichobom</string>
-    <string name="custom_url_scheme">com.bichobom</string>
+    <string name="package_name">com.appbichobom</string>
+    <string name="custom_url_scheme">com.appbichobom</string>
     <string name="facebook_app_id">862388254198920</string>
     <string name="fb_login_protocol_scheme">fb862388254198920</string>
 </resources>
