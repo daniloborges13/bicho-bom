@@ -1,4 +1,4 @@
-package com.bichobom;
+package com.appbichobom;
 
 import android.os.Bundle;
 
