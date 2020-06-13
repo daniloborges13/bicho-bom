@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cfa4311-4617-46ed-ad58-ae9de78d42dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/components/models/doacao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/components/models/doacao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/components/models/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/components/models/model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/components/models/perdidos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/components/models/perdidos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/home/home.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/home/home.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/home/home.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/home/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/adote/adote-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/adote/adote-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/adote/adote.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/adote/adote.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/adote/adote.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/cadastro/cadastro.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/doacao/doacao.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/home/home-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/home/home.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/home/home.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/home/home.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/home/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/login/login-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/login/login-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/login/login.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/login/login.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/login/login.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/login/login.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/login/login.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/perfil/perfil.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/procurarperdidos/procurarperdidos.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/redefinir-senha/redefinir-senha.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/registrarperdidos/registrarperdidos.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/pages/sobre/sobre.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/services/doacao/doacao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/services/doacao/doacao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/services/firebase/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/services/firebase/firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/services/login/loginService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/services/login/loginService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/app/services/perdidos/perdidos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/app/services/perdidos/perdidos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/assets/shapes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/assets/shapes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/theme/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/zone-flags.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/zone-flags.ts" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Danilo\Desktop\bichobomapp\bichoBom\android\app\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1d3tcE0LDRWw7YAOdoTQmfczS9w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cfa4311-4617-46ed-ad58-ae9de78d42dd" name="Default Changelist" comment="" />
+      <created>1591665681721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591665681721</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
