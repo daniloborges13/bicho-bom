@@ -30,7 +30,7 @@ export class CadastroPage {
         .then((credential) => {
           credential.user.sendEmailVerification();
           this.toast('Usuário criado com sucesso.');
-          this.router.navigate['/home'];
+          this.router.navigate(['/login']);
         })
         .catch((error: any) => {
           if (error.code === 'auth/email-already-in-use') {
@@ -49,7 +49,7 @@ export class CadastroPage {
   async toast(msg: string) {
     const toast = await this.toastCtrl.create({
       message: msg,
-      duration: 1500,
+      duration: 3000,
       position: 'bottom',
     });
     toast.present();
