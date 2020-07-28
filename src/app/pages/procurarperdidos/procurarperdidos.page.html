@@ -32,7 +32,7 @@
             <br>
             <b>Observações: {{perdido.obs}} </b>
             <br>
-            <b>WhatsApp: <a href="https://wa.me/?text=I'm%20inquiring%20about%20the%20apartment%20listing`" > {{perdido.celular}} </a> </b>
+            <b>WhatsApp: <a [href]="'https://wa.me/55' + perdido.celular + '?text=Olá,%20acredito%20que%20encontrei%20o%20respectivo%20animal%20que%20você%20publicou%20no%20App%20Bicho%20Bom.'"> {{perdido.celular}}</a> </b>
           </ion-col>
         </ion-row>
       </ion-grid>

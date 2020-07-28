@@ -16,8 +16,8 @@ export class MinhaspubPage implements OnInit {
     private afs: AngularFirestore,
     private afa: AngularFireAuth,
     private alertCtrl: AlertController
-  ) {}
-
+  ) { }
+  
   async ngOnInit() {
     const user = await this.afa.currentUser;
     this.bichos = this.afs
@@ -42,12 +42,12 @@ export class MinhaspubPage implements OnInit {
       buttons: [
         {
           text: 'Não',
-          handler: () => {},
+          handler: () => { },
         },
         {
           text: 'Sim',
           handler: async () => {
-            const doc = await this.afs.collection('perdidos').doc(id);
+            const doc = await this.afs.collection('doacoes').doc(id);
             await doc.delete();
             return;
           },

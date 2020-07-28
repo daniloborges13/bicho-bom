@@ -16,7 +16,7 @@
     <ion-card *ngFor="let bicho of bichos | async | filtro: buscarCidade ">
       <br>
       <div class="fotosPets">
-        <img [src]="bicho.urlFoto" />
+        <img [src]="bicho.urlFoto"/>
       </div>
 
       <ion-card-header>
@@ -37,7 +37,7 @@
               <br>          
               <b>Observações: {{bicho.obs}}</b>
               <br>
-              <b>WhatsApp: <a> {{bicho.celular}} </a> </b>
+              <b>WhatsApp: <a [href]="'https://wa.me/55' + bicho.celular + '?text=Olá,%20eu%20vi%20o%20animal%20que%20você%20publicou%20no%20App%20Bicho%20Bom,%20e%20estou%20interessado.'"> {{bicho.celular}} </a> </b>
             </ion-col>
           </ion-row>
         </ion-grid>
